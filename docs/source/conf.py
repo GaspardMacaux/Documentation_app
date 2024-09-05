@@ -27,9 +27,15 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-# -- Options for HTML output
-
+# Configuration pour le thème Read the Docs
 html_theme = 'sphinx_rtd_theme'
+
+# Options pour le thème Read the Docs
+html_theme_options = {
+    'collapse_navigation': False,  # Empêche le menu de se refermer
+    'navigation_depth': -1,        # Affiche toutes les sections sans limite de profondeur
+}
+
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

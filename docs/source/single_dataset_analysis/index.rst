@@ -7,7 +7,7 @@ This section covers the analysis of single datasets, from loading data to visual
 .. toctree::
    :maxdepth: 1
 
-   introduction
+
    load_dataset
    data_cleanup
    dimensional_reduction

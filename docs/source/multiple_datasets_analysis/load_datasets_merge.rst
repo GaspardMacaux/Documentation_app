@@ -1,34 +1,36 @@
-Usage
-=====
+==========================
+Load Datasets
+==========================
 
-.. _installation:
+In this section, you will learn how to load multiple datasets into a unified analysis environment. Integrating datasets is crucial when dealing with single-cell RNA sequencing data from different sources or conditions. It allows you to perform a comprehensive analysis that considers all datasets as a single entity, enabling direct comparisons and joint analysis.
 
-Installation
-------------
+**Concept of Data Integration:**
 
-To use Lumache, first install it using pip:
+Data integration in the context of single-cell RNA sequencing involves combining multiple datasets (e.g., from different experiments or conditions) into a single cohesive dataset. This process is necessary to:
 
-.. code-block:: console
+- Reduce batch effects and technical variations that may arise from different sequencing runs.
+- Increase the statistical power by pooling cells from multiple datasets.
+- Enable a unified analysis across different conditions or experimental setups.
 
-   (.venv) $ pip install lumache
+**Key Steps in the Integration Process:**
 
-Creating recipes
-----------------
+1. **Data Loading:** The initial step involves loading Seurat objects or 10X data files, which are standard formats for single-cell RNA sequencing data. This step converts raw data into a format that can be processed and analyzed.
+   
+2. **Data Cleaning and Preparation:** After loading, the data is cleaned to remove low-quality cells or genes that might introduce noise into the analysis.
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+3. **Normalization and Scaling:** The datasets are normalized to account for sequencing depth and scaled to ensure that highly variable genes are prioritized in the downstream analysis.
 
-.. autofunction:: lumache.get_random_ingredients
+4. **Integration:** This step involves finding shared features (anchor points) across datasets and aligning them into a common space. The result is a single integrated dataset that can be analyzed as a whole.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+.. tip::
+   Use Seurat objects saved in `.rds` format for faster loading and processing. Ensure that the data is properly formatted and pre-processed before integration to minimize errors.
 
-.. autoexception:: lumache.InvalidKindError
+.. warning::
+   Improperly formatted datasets or those from different species may cause integration errors or produce misleading results. Always check dataset compatibility before integrating.
 
-For example:
+**Instructions for Loading Datasets:**
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+1. Prepare your datasets in `.rds` or `.gz` format.
+2. Select the appropriate dataset type (snRNA-seq, Multiome, or Seurat Object).
+3. Upload the datasets into the platform using the provided interface. The system will handle decompression and initial checks.
 

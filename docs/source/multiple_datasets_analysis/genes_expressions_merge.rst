@@ -1,34 +1,34 @@
-Usage
-=====
+==========================
+Visualizing Gene Expression
+==========================
 
-.. _installation:
+Visualizing gene expression is an essential step in understanding the distribution and variability of specific genes across different cell populations. This section provides various visualization tools to explore gene expression in your integrated datasets.
 
-Installation
-------------
+**Types of Plots Available:**
 
-To use Lumache, first install it using pip:
+1. **Feature Plot:** Displays the spatial expression of genes on a UMAP or PCA plot. Useful for visualizing gene co-expression and identifying marker genes for specific clusters.
 
-.. code-block:: console
+2. **Violin Plot:** Shows the distribution of gene expression levels across different clusters. Useful for comparing gene expression between clusters and identifying marker genes.
 
-   (.venv) $ pip install lumache
+3. **Dot Plot:** Represents the expression of multiple genes across clusters. Each dot’s size represents the percentage of cells expressing the gene, and the color represents the average expression level.
 
-Creating recipes
-----------------
+4. **Ridge Plot:** Displays the density of gene expression levels for each cluster. Useful for visualizing gene expression distributions within clusters.
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+**How to Use the Visualization Tools:**
 
-.. autofunction:: lumache.get_random_ingredients
+1. Select the genes of interest to visualize.
+2. Choose the appropriate plot type based on the analysis goals.
+3. Customize plot settings, such as text size, axes visibility, and color scale, to enhance the visual clarity of the data.
+4. Generate the plot and analyze the gene expression patterns across different clusters or conditions.
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+.. tip::
+   Use the Feature Plot to visualize spatial gene expression patterns and identify co-expressed genes within the same cluster.
 
-.. autoexception:: lumache.InvalidKindError
+.. warning::
+   Ensure that selected genes are present in the dataset to avoid missing data errors. Cross-check gene availability using the gene list provided in the data upload step.
 
-For example:
+**Applications:**
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+- **Marker Gene Identification:** Use visualization tools to identify and validate marker genes for different cell types or clusters.
+- **Data Exploration:** Explore the heterogeneity of gene expression across different conditions or experimental setups.
 

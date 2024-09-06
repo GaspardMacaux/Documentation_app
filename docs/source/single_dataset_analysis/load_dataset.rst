@@ -21,8 +21,8 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
 
 
 .. image:: /_static/images/image_load_data.png
-   :alt: Image illustrant le projet
-   :width: 50%
+   :width: 800px
+   :height: 400px
    :align: center
 
 

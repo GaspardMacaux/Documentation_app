@@ -37,5 +37,9 @@ html_theme_options = {
 }
 
 
+# Ajouter le répertoire `_static` pour les images et autres fichiers statiques
+html_static_path = ['image']
+
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

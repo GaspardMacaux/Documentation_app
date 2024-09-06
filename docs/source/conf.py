@@ -37,8 +37,9 @@ html_theme_options = {
 }
 
 
-# Ajouter le répertoire `_static` pour les images et autres fichiers statiques
-html_static_path = ['images']
+# Ajouter le répertoire `_static` pour les fichiers statiques
+html_static_path = ['_static']
+
 
 
 # -- Options for EPUB output

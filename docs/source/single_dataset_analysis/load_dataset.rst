@@ -20,7 +20,7 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
    - For Seurat Objects, ensure the `.rds` file is valid and not corrupted.
 
 
-.. image:: /_static/images/image_load_data.png
+.. image:: ../_static/images/image_load_data.png
   width: auto;
   height: auto;
    :align: center

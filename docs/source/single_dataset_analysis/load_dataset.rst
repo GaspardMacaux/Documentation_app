@@ -19,10 +19,14 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
    - For 10X Genomics data, make sure all three files (`barcodes.tsv.gz`, `matrix.mtx.gz`, and `features.tsv.gz`) are included in the `.zip`.
    - For Seurat Objects, ensure the `.rds` file is valid and not corrupted.
 
-.. figure:: ../_static/images/image_load_data.png
-   :width: 20%
+.. image:: ../_static/images/image_load_data.png
+   :width: 90%
    :align: center
 
+
+
+.. tip::
+   Before uploading, double-check that the dataset file is in the correct format and contains all necessary components. This can prevent errors during loading.
 
 .. warning::
    If the file format is incorrect or missing necessary files, the loading process will fail, and you will receive an error message. Always verify the dataset integrity before uploading.

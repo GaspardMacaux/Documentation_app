@@ -23,9 +23,9 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
    :width: 90%
    :align: center
 
-.. raw:: html
 
-   <br>
+
+
 
 
 .. tip::

@@ -26,7 +26,7 @@ Visualizing gene expression is an essential step in understanding the distributi
 3. Customize plot settings, such as text size, axes visibility, and color scale, to enhance the visual clarity of the data.
 4. Generate the plot and analyze the gene expression patterns across different clusters or conditions.
 
-.. image:: ../_static/images/multiple_datasets_analysis/genes_expression_merge.png
+.. image:: ../_static/images/multiple_datasets_analysis/genes_expressions_merge.png
    :width: 90%
    :align: center
 

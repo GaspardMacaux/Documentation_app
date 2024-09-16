@@ -16,6 +16,13 @@ Visualizing gene expression markers is crucial for interpreting the biological s
 ### How to Visualize Marker Expression
 
 1. **Select Genes**: Use the dropdown menu to select one or more genes to visualize.
+
+
+.. image:: ../_static/images/single_dataset_analysis/visualizing_marker_expression_1.png
+   :width: 90%
+   :align: center
+
+
 2. **Choose Plot Type**: Select the desired plot type (Feature Plot, Violin Plot, Dot Plot, or Heatmap).
 3. **Customize Plot Settings**: Adjust settings such as axes labels, text size, and point size.
 4. **Generate Plot**: Click the "Run Visualization" button to generate the plot.

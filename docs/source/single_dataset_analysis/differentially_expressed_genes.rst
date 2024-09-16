@@ -15,7 +15,7 @@ Identifying differentially expressed genes (DEGs) helps understand the differenc
 
 3. **Run DEG Analysis**: Click "Find DEGs" to perform the analysis.
 
-.. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes_1.png
+.. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes.png
    :width: 90%
    :align: center
 

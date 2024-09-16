@@ -36,6 +36,11 @@ Trajectory Analysis involves mapping cells along a continuum that represents a b
 4. **Select the Root Cell:** Click on the "Start Root Selection" button and select a root cell on the UMAP plot.
 5. **Order Cells in Pseudotime:** Confirm the root cell selection to order the cells along the trajectory.
 
+.. image:: ../_static/images/trajectory_analysis/trajectory_analysis.png
+   :width: 90%
+   :align: center
+
+
 **Applications of Trajectory Analysis:**
 
 - **Developmental Biology:** Understand the differentiation pathways of stem cells into various lineages.

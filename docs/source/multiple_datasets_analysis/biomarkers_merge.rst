@@ -18,6 +18,10 @@ Biomarkers are characteristic genes whose expression levels are indicative of sp
 2. **Validation:** Validate identified biomarkers by cross-referencing with known marker genes from literature or reference datasets.
 3. **Visualization:** Use visualization tools like Feature Plots and Heatmaps to display the expression patterns of biomarkers across clusters.
 
+.. image:: ../_static/images/multiple_datasets_analysis/biomarkers_merge.png
+   :width: 90%
+   :align: center
+
 .. tip::
    Prioritize biomarkers that are not only differentially expressed but also have known biological relevance to the cluster’s presumed identity.
 

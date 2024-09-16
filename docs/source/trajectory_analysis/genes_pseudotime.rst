@@ -14,9 +14,17 @@ Genes Pseudotime Analysis is used to identify and visualize genes whose expressi
    - After ordering cells in pseudotime, differential expression analysis is performed to identify genes that vary significantly along the trajectory. These genes are often key drivers of the biological process being studied.
    - The `graph_test` function in Monocle is used to identify genes that are differentially expressed along the principal graph.
 
+.. image:: ../_static/images/trajectory_analysis/genes_pseudotime_1.png
+   :width: 90%
+   :align: center
+
 2. **Gene Dynamics Visualization:**
    - Selected genes can be visualized along the trajectory to understand their expression dynamics over pseudotime. This helps in identifying the stages at which specific genes are upregulated or downregulated.
    - The `plot_cells` function can be used to visualize gene expression on the trajectory plot, showing how different genes are expressed across the inferred pseudotime.
+
+.. image:: ../_static/images/trajectory_analysis/genes_pseudotime_2.png
+   :width: 90%
+   :align: center
 
 3. **Gene Module Analysis:**
    - Gene modules, which are groups of co-expressed genes, can be identified along the trajectory. These modules often represent functional groups of genes that work together in the biological process.

@@ -17,9 +17,18 @@ Visualizing gene expression is an essential step in understanding the distributi
 **How to Use the Visualization Tools:**
 
 1. Select the genes of interest to visualize.
+
+.. image:: ../_static/images/multiple_datasets_analysis/genes_selection_merge.png
+   :width: 90%
+   :align: center
+
 2. Choose the appropriate plot type based on the analysis goals.
 3. Customize plot settings, such as text size, axes visibility, and color scale, to enhance the visual clarity of the data.
 4. Generate the plot and analyze the gene expression patterns across different clusters or conditions.
+
+.. image:: ../_static/images/multiple_datasets_analysis/genes_expression_merge.png
+   :width: 90%
+   :align: center
 
 .. tip::
    Use the Feature Plot to visualize spatial gene expression patterns and identify co-expressed genes within the same cluster.

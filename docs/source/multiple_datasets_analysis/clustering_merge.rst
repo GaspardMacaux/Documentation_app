@@ -20,6 +20,10 @@ Clustering involves grouping cells that exhibit similar gene expression patterns
 
 3. **Resolution Parameter:** The resolution parameter controls the granularity of the clustering. A higher resolution value will result in more clusters, potentially identifying more subtle subpopulations, whereas a lower resolution value will result in fewer, broader clusters.
 
+.. image:: ../_static/images/multiple_datasets_analysis/clustering_merge.png
+   :width: 90%
+   :align: center
+
 .. tip::
    Adjust the resolution parameter to find the optimal number of clusters for your analysis. Start with a moderate value and adjust based on the clustering results and biological relevance.
 

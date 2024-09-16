@@ -9,9 +9,9 @@ This section provides guidance on analyzing multiple datasets, including merging
 
    load_datasets_merge
    clustering_merge
-   differentially_expressed_merge
-   genes_expression_merge
+   differentially_expression_merge
+   genes_expressions_merge
    heatmap_merge
-   cell_type_identity_merge
+   cell_identity_merge
    biomarkers_merge
    subset_merge

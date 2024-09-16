@@ -18,3 +18,6 @@ Subsetting involves selecting a specific portion of the data based on certain cr
 2. **Gene Expression-Based Subsetting:** Define subsets based on the expression levels of specific genes or sets of genes. This is useful for isolating cells with particular molecular characteristics.
 3. **Subsetting Tools:** Use the provided interface to define subsetting criteria and create new Seurat objects for the subsets.
 
+.. image:: ../_static/images/multiple_datasets_analysis/subset_merge.png
+   :width: 90%
+   :align: center

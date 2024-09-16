@@ -18,6 +18,9 @@ Cell type assignment is the process of labeling clusters with known cell type id
 2. **Cluster Annotation:** Assign cell type identities to clusters based on the expression patterns of marker genes. This can be done manually or through automated tools that match expression patterns to reference datasets.
 3. **Metadata Update:** Update the Seurat object metadata to reflect the new cell type identities, which can then be used in further analyses.
 
+.. image:: ../_static/images/multiple_datasets_analysis/cell_identity_merge_png
+   :align: center
+
 .. tip::
    Use multiple marker genes to increase the accuracy of cell type assignment. Validate assignments with known biological information and reference datasets.
 

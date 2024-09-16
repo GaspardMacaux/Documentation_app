@@ -20,7 +20,7 @@ Visualizing gene expression markers is crucial for interpreting the biological s
 3. **Customize Plot Settings**: Adjust settings such as axes labels, text size, and point size.
 4. **Generate Plot**: Click the "Run Visualization" button to generate the plot.
 
-.. image:: ../_static/images/single_dataset_analysis/visualising_marker_expression.png
+.. image:: ../_static/images/single_dataset_analysis/visualizing_marker_expression.png
    :width: 90%
    :align: center
 

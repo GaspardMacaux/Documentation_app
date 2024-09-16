@@ -33,9 +33,8 @@ Clustering groups cells with similar gene expression profiles into clusters, whi
 ### Visualizing Clusters
 
 - **UMAP/t-SNE Plot**: Use these plots to visualize clusters and assess their separation.
-- **Feature Plots**: Display gene expression across clusters to identify marker genes and validate clustering results.
 
 ### Common Issues
 
 - **Clusters are not well-separated**: Adjust the resolution or use more principal components.
-- **Too many small clusters**: Lower the resolution or increase the clustering granularity.
+- **Too many small clusters**: Lower the resolution 

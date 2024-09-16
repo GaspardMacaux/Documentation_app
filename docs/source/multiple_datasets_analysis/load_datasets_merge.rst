@@ -22,6 +22,10 @@ Data integration in the context of single-cell RNA sequencing involves combining
 
 4. **Integration:** This step involves finding shared features (anchor points) across datasets and aligning them into a common space. The result is a single integrated dataset that can be analyzed as a whole.
 
+.. image:: ../_static/images/multiple_datasets_analysis/load_datasets_merge.png
+   :width: 90%
+   :align: center
+
 .. tip::
    Use Seurat objects saved in `.rds` format for faster loading and processing. Ensure that the data is properly formatted and pre-processed before integration to minimize errors.
 

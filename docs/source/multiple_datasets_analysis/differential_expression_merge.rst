@@ -8,13 +8,19 @@ Identifying differentially expressed genes (DEGs) is a powerful method to unders
 
 Differential expression analysis involves comparing gene expression levels between different groups of cells (e.g., different clusters or conditions) to identify genes that are significantly upregulated or downregulated.
 
+.. image:: ../_static/images/multiple_datasets_analysis_differentialy_expressed_1_merge.png
+   :width: 90%
+   :align: center
+
 **Key Steps in Differential Expression Analysis:**
 
-1. **Normalization:** Data is normalized to account for differences in sequencing depth and other technical variations.
-   
-2. **Statistical Testing:** A statistical test (e.g., Wilcoxon rank-sum test) is applied to identify genes that are differentially expressed between clusters or conditions. This test calculates a p-value to assess the significance of the observed differences.
+1. **Statistical Testing:** A statistical test (e.g., Wilcoxon rank-sum test) is applied to identify genes that are differentially expressed between clusters or conditions. This test calculates a p-value to assess the significance of the observed differences.
 
-3. **Thresholding:** Users can set thresholds for the log fold change and minimum percentage of cells expressing the gene to refine the list of DEGs.
+2. **Thresholding:** Users can set thresholds for the log fold change and minimum percentage of cells expressing the gene to refine the list of DEGs.
+
+.. image:: ../_static/images/multiple_datasets_analysis_differentialy_expressed_2_merge.png
+   :width: 90%
+   :align: center
 
 .. tip::
    Use a higher log2 fold change threshold to identify the most biologically relevant DEGs. Consider adjusting the p-value threshold to control for false discovery rates.

@@ -24,6 +24,11 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
    :align: center
 
 
+
+
+.. tip::
+   Before uploading, double-check that the dataset file is in the correct format and contains all necessary components. This can prevent errors during loading.
+
 .. warning::
    If the file format is incorrect or missing necessary files, the loading process will fail, and you will receive an error message. Always verify the dataset integrity before uploading.
 

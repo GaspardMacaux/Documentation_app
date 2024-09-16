@@ -15,6 +15,10 @@ Identifying differentially expressed genes (DEGs) helps understand the differenc
 
 3. **Run DEG Analysis**: Click "Find DEGs" to perform the analysis.
 
+.. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes_1.png
+   :width: 90%
+   :align: center
+
 .. tip::
    A log fold change threshold of 0.25 and a minimum percentage of 10% are good starting points, but these can be adjusted based on the dataset's characteristics.
 

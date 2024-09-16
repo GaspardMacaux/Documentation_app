@@ -11,6 +11,10 @@ Subsetting allows users to focus on specific clusters or genes of interest by cr
 1. **Select Clusters or Genes**: Choose clusters or genes to include in the subset.
 2. **Apply Subset**: Click "Apply Subset" to create a new dataset with the selected cells or genes.
 
+.. image:: ../_static/images/single_dataset_analysis/subset.png
+   :width: 90%
+   :align: center
+
 .. tip::
    Subsetting can help in reducing computational load and focusing on specific biological questions.
 

@@ -16,6 +16,10 @@ Data cleanup is a crucial step in the preprocessing of single-cell RNA sequencin
 
 3. **Normalize Data**: Normalize the dataset to scale the expression levels across cells.
 
+.. image:: ../_static/images/single_dataset_analysis/data_cleanup.png
+   :width: 90%
+   :align: center
+
 .. tip::
    For scRNA-seq data, a mitochondrial content below 5% is typically considered acceptable to avoid dead or dying cells.
 

@@ -13,6 +13,11 @@ Clustering groups cells with similar gene expression profiles into clusters, whi
    - **Resolution**: Adjust the resolution to control the granularity of the clusters. Higher values produce more clusters, while lower values yield fewer, larger clusters.
    - **Algorithm**: Choose the clustering algorithm (e.g., Louvain, Leiden).
 
+.. image:: ../_static/images/single_dataset_analysis/neighbors.png
+   :width: 90%
+   :align: center
+
+
 2. **Run Clustering**: Click "Find Clusters" to execute the clustering algorithm.
 
 .. tip::
@@ -20,6 +25,10 @@ Clustering groups cells with similar gene expression profiles into clusters, whi
 
 .. warning::
    Over-clustering can result in artificial clusters that do not represent true biological differences. Be cautious with high-resolution settings.
+
+.. image:: ../_static/images/single_dataset_analysis/clustering.png
+   :width: 90%
+   :align: center
 
 ### Visualizing Clusters
 

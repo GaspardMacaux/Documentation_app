@@ -18,6 +18,11 @@ Dimensional reduction techniques like PCA, t-SNE, and UMAP help in reducing the 
 2. **Set Parameters**: Adjust the number of dimensions (principal components) to retain and other method-specific parameters.
 3. **Run Analysis**: Click "Run Dimensional Reduction" to start the analysis.
 
+.. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
+   :width: 90%
+   :align: center
+
+
 .. tip::
    Begin with PCA for an initial dimensional reduction, then use UMAP or t-SNE for visualization. UMAP is often preferred for its balance between local and global structure preservation.
 

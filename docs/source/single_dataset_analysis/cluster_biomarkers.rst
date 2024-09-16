@@ -12,6 +12,10 @@ Cluster biomarkers are genes that are uniquely or highly expressed in specific c
 2. **Set Biomarker Parameters**: Adjust the log fold change and percentage thresholds for biomarker identification.
 3. **Run Biomarker Analysis**: Click "Find Biomarkers" to perform the analysis.
 
+.. image:: ../_static/images/single_dataset_analysis/cluster_biomarkers.png
+   :width: 90%
+   :align: center
+
 .. tip::
    Biomarkers with a high log fold change and expression in a significant percentage of cells within a cluster are often more robust and reliable.
 

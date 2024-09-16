@@ -10,11 +10,11 @@ This section covers the analysis of single datasets, from loading data to visual
 
    load_dataset
    data_cleanup
-   dimensional_reduction
+   dimentional_reduction
    clustering
    differentially_expressed_genes
    visualizing_marker_expression
-   heat_maps
+   heatmaps
    assigning_cell_type_identity
    cluster_biomarkers
    subset

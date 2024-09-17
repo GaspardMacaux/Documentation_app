@@ -4,9 +4,9 @@ My Project Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Introduction
+   :caption: Welcome
 
-   /introduction
+   /introcution
 
 
 

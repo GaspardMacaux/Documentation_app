@@ -6,7 +6,6 @@ Clustering
 
 Clustering is a key step in single-cell RNA sequencing analysis that groups cells with similar gene expression profiles into clusters. These clusters may correspond to different cell types, states, or other biological distinctions. In this application, clustering is performed in two main steps: **finding neighbors** and **running the clustering algorithm**. Additionally, **UMAP** is used to visualize the clusters.
 
-### Key Concepts
 
 #### Neighbors Calculation
 

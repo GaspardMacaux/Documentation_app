@@ -13,7 +13,7 @@ Many thanks to Rstudio.
 
 This application is licensed under the GPL3.
 
-.. image:: /_static/images/trajectory_analysis/acknowledgment.png
+.. image:: /_static/images/acknowledgment.png
    :width: 90%
    :align: center
 

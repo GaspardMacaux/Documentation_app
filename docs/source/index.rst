@@ -6,7 +6,7 @@ My Project Documentation
    :maxdepth: 2
    :caption: Welcome
 
-   /introcution
+   /introduction
 
 
 
@@ -49,6 +49,6 @@ My Project Documentation
    :maxdepth: 2
    :caption: Acknowledgment & Licence
 
-   /acknowlegment
+   /acknowledgment
 
   

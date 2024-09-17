@@ -29,9 +29,9 @@ Dimensional reduction is a crucial step in simplifying high-dimensional single-c
    - **Dimensional Loading Plot**: This plot displays the loadings of the principal components, helping you understand the contribution of individual genes to the principal components.
    - **PCA Plot**: A scatter plot of the top principal components, showing how the cells are distributed across the principal components.
 
-.. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
-   :width: 90%
-   :align: center
+   .. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
+      :width: 90%
+      :align: center
 
 
 3. **Elbow Plot**:  

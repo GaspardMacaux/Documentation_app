@@ -12,7 +12,7 @@ This section allows users to manually assign or modify cell type identities base
 2. **Enter New Identity**: Provide a new cell type label for the selected cluster.
 3. **Apply Changes**: Click "Assign Identity" to update the cell type identity.
 
-.. image:: ../_static/images/single_dataset_analysis/assigning_cell_type_identity.png
+.. image:: ../_static/images/single_dataset_analysis/cell_identity_merge.png
    :width: 90%
    :align: center
 

@@ -33,11 +33,6 @@ Selecting variable features is essential for downstream analysis like clustering
 1. **Set Number of Variable Features**: Choose the number of highly variable genes to use in the analysis.
 2. **Visualize Variable Features**: Use the plots provided to assess the variability and quality of the selected genes.
 
-.. image:: ../_static/images/single_dataset_analysis/variables_features.png
-   :width: 90%
-   :align: center
-
-
 .. tip::
    A common choice is to select 2000 variable features, but this can be adjusted depending on the dataset size and complexity.
 

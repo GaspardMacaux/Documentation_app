@@ -1,5 +1,5 @@
 ==========================
-Assigning Cell Type Identity
+Assigning Cell Identity
 ==========================
 
 Assigning cell type identities to clusters is a crucial step in single-cell analysis. This process involves labeling clusters based on known marker gene expression, allowing for the annotation of cell types or states.
@@ -18,7 +18,7 @@ Cell type assignment is the process of labeling clusters with known cell type id
 2. **Cluster Annotation:** Assign cell type identities to clusters based on the expression patterns of marker genes. This can be done manually or through automated tools that match expression patterns to reference datasets.
 3. **Metadata Update:** Update the Seurat object metadata to reflect the new cell type identities, which can then be used in further analyses.
 
-.. image:: ../_static/images/multiple_datasets_analysis/cell_identity_merge_png
+.. image:: ../_static/images/multiple_datasets_analysis/assigning_cell_identity_merge.png
    :width: 90%
    :align: center
 

@@ -4,33 +4,55 @@ Differentially Expressed Genes (DEGs)
 
 ### Overview
 
-Identifying differentially expressed genes (DEGs) helps understand the differences between clusters or experimental conditions.
+Identifying **Differentially Expressed Genes (DEGs)** is essential for understanding the biological differences between cell clusters or experimental conditions. DEGs are genes that show statistically significant differences in expression between two groups, such as different clusters of cells. This can help reveal important markers that distinguish cell types or states, or highlight genes that are responding to specific experimental conditions.
+
+In this application, DEGs are identified by comparing the expression levels of genes across different clusters of cells.
+
+### Key Concepts
+
+- **Log Fold Change (logFC)**:  
+  Log fold change measures the difference in expression levels between two groups (e.g., clusters) on a logarithmic scale. A higher logFC indicates a more substantial difference in expression. For example, a logFC of 1 means that a gene is expressed two times more in one cluster compared to another. You can set a threshold to control the minimum logFC required for a gene to be considered differentially expressed.
+
+- **Percentage Threshold**:  
+  This parameter controls the minimum percentage of cells within a cluster that must express the gene for it to be considered in the analysis. This prevents genes that are expressed in only a few cells from being falsely classified as DEGs.
+
+- **Statistical Significance (p-value and adjusted p-value)**:  
+  Once the DEGs are identified, they are assessed for statistical significance using p-values. The p-values are also adjusted (e.g., using the Bonferroni or Benjamini-Hochberg correction) to account for multiple testing.
 
 ### How to Identify DEGs
 
-1. **Select Clusters for Comparison**: Choose the clusters to compare from the dropdown menu.
-2. **Set DEG Parameters**:
-   - **Log Fold Change Threshold**: Set the minimum log fold change to identify significant DEGs.
-   - **Percentage Threshold**: Set the minimum percentage of cells expressing the gene in either cluster.
+1. **Select Parameters**:  
+   To identify DEGs, you need to set the following parameters:
+   - **Log Fold Change Threshold**: The minimum log fold change to consider a gene differentially expressed. By default, this is set to 0.25, meaning that only genes with at least a 1.19x difference in expression will be considered.
+   - **Percentage Threshold**: The minimum percentage of cells in each cluster that must express the gene for it to be included in the analysis. For example, a threshold of 0.1 (10%) means the gene must be expressed in at least 10% of the cells in one cluster.
 
-3. **Run DEG Analysis**: Click "Find DEGs" to perform the analysis.
+   .. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes.png
+      :width: 90%
+      :align: center
 
-.. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes.png
-   :width: 90%
-   :align: center
+2. **Run DEG Analysis**:  
+   After selecting the parameters, click **"Find DEGs"** to perform the differential expression analysis. The application will identify genes that are significantly different between the selected clusters based on the provided thresholds.
+
+3. **Download Results**:  
+   After the analysis, you can download the identified DEGs as a CSV file. The DEGs are displayed in a table where each gene's log fold change, p-value, and adjusted p-value are shown.
+
+   - **Download DEGs**: Click **Download differentially expressed genes** to download the results in CSV format.
+   - **Save Seurat Object**: Save the entire Seurat object, including all computed DEGs, by clicking **Save Seurat Object**.
 
 .. tip::
-   A log fold change threshold of 0.25 and a minimum percentage of 10% are good starting points, but these can be adjusted based on the dataset's characteristics.
+   Start with a **log fold change threshold** of 0.25 and a **percentage threshold** of 10% (0.1) to get a balanced set of DEGs. If you find too many DEGs, try increasing the thresholds.
 
 .. warning::
-   Very low thresholds may produce too many false positives, while very high thresholds may miss important DEGs. Adjust parameters carefully.
+   Setting thresholds that are too low may result in many false positives (genes that appear to be differentially expressed but are not biologically significant), while setting thresholds that are too high may cause important DEGs to be missed. Adjust these thresholds based on your dataset’s size and characteristics.
+
 
 ### Common Issues
 
-- **No DEGs found**: Lower the log fold change threshold or increase the minimum percentage of cells.
-- **Too many DEGs**: Increase the log fold change threshold to focus on more significant changes.
+- **No DEGs Found**:  
+   If no DEGs are found, consider lowering the **log fold change threshold** or increasing the **percentage threshold**. A lower log fold change will capture more subtle changes in gene expression, and increasing the percentage threshold ensures that only genes expressed in more cells are considered.
 
-### Visualizing DEGs
+- **Too Many DEGs**:  
+   If you find too many DEGs, try increasing the log fold change threshold or decreasing the percentage threshold. This will help you focus on genes with stronger expression differences and filter out those that may not be biologically relevant.
 
-- **Volcano Plot**: Use the volcano plot to visualize DEGs based on their significance and log fold change.
-- **Heatmap**: Create heatmaps to display the expression patterns of the top DEGs across clusters.
+- **Error During DEG Calculation**:  
+   If an error occurs, ensure that the dataset is properly formatted and the Seurat object is loaded. Double-check that you have set the thresholds correctly and that the selected clusters contain enough cells for meaningful comparison.

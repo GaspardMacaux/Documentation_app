@@ -28,7 +28,7 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
    Before uploading, double-check that the dataset file is in the correct format and contains all necessary components. This can prevent errors during loading.
 
 .. warning::
-   If the file format is incorrect or missing necessary files, the loading process will fail, and you will receive an error message. Always verify the dataset integrity before uploading.
+   If the file format is incorrect or missing necessary files, the loading process will fail, and you will receive an error message.
 
 ### Common Issues and Solutions
 
@@ -36,5 +36,4 @@ In this section, you will learn how to load a single-cell RNA sequencing dataset
 - **Error: File not found**: Check the file path and ensure the file is accessible.
 - **Error: Missing files in `.zip`**: Ensure all required files (`barcodes.tsv.gz`, `matrix.mtx.gz`, `features.tsv.gz`) are present in the archive.
 
-.. note::
-   It is recommended to back up your original data files before loading them into the application to prevent data loss.
+

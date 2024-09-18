@@ -15,7 +15,7 @@ The first step in clustering is calculating the **nearest neighbors** for each c
   Calculating neighbors allows the algorithm to identify groups of cells that are tightly packed in the multidimensional space defined by their gene expression. This is the foundation of clustering, where the idea is that cells with similar profiles form clusters.
 
 - **How Are Neighbors Calculated?**  
-  The algorithm uses **Principal Component Analysis (PCA)** to reduce the dimensionality of the data, and then it calculates the nearest neighbors based on the top principal components. You control how many dimensions (principal components) are used, typically between 10 to 20, depending on the complexity of the data.
+  The algorithm uses **Principal Component Analysis (PCA)** to reduce the dimensionality of the data, and then it calculates the nearest neighbors based on the top principal components. You control how many dimensions (principal components) are used, typically between 5 to 20, depending on the complexity of the data.
 
 - **Choice of Dimensions**:  
   Choosing too few dimensions may oversimplify the relationships between cells, while choosing too many may introduce noise and make clustering less accurate. A good starting point is to use between 10 and 20 principal components.

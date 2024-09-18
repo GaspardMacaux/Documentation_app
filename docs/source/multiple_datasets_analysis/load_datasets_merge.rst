@@ -63,16 +63,9 @@ Data integration in the context of single-cell RNA sequencing involves combining
    - Click "Add Metadata Field" to specify new metadata fields for the integrated dataset.
    - Enter the field names and values for each dataset and click "Add Metadata" to append this information to the integrated dataset.
 
-### Downloading the Integrated Object
-
-- After the integration is complete, the integrated Seurat object can be downloaded by using the interface options provided for saving.
-
 ### Troubleshooting
 
 - **Error During Integration**:  
    Ensure that at least two datasets are uploaded and that the files are correctly formatted. If an error occurs, check the log for details.
-
-- **Dataset Compatibility**:  
-   Always verify that the datasets are compatible in terms of species and experimental design before attempting integration.
 
 By following these steps, you can effectively load and integrate multiple single-cell RNA sequencing datasets, enabling comprehensive and unified analysis.

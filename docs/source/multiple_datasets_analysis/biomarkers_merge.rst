@@ -22,10 +22,7 @@ Biomarkers are characteristic genes whose expression levels are indicative of sp
    - **Compare Two Clusters**: Choose two clusters for direct comparison to identify differentially expressed genes between them.
    - **Cross-Dataset Cluster Comparison**: Select clusters from two different datasets to compare their gene expression profiles, which is useful for validating findings across different conditions or experimental setups.
 
-3. **Validation**:  
-   Validate identified biomarkers by cross-referencing with known marker genes from literature or reference datasets.
-
-4. **Visualization**:  
+3. **Visualization**:  
    Use visualization tools like UMAP plots to display the spatial distribution of biomarkers across clusters.
 
 .. image:: ../_static/images/multiple_datasets_analysis/biomarkers_merge.png
@@ -49,17 +46,3 @@ Biomarkers are characteristic genes whose expression levels are indicative of sp
 
 4. **Generate Cluster Table**:  
    - Generate and view a table providing an overview of clusters with their assigned identities and biomarkers.
-
-.. tip::  
-   Prioritize biomarkers that are not only differentially expressed but also have known biological relevance to the cluster’s presumed identity.
-
-.. warning::  
-   Some biomarkers may be influenced by technical noise or batch effects. Validate findings with multiple datasets or experimental replicates.
-
-### Applications of Biomarkers
-
-- **Diagnostic and Therapeutic Target Identification**:  
-  Biomarkers can serve as diagnostic indicators or therapeutic targets in disease contexts.
-
-- **Functional Analysis**:  
-  Biomarkers provide clues about the functional roles of different cell types or states.

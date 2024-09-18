@@ -54,9 +54,6 @@ Subsetting involves selecting a specific portion of the data based on certain cr
 .. tip::  
    Subsetting is useful for focusing on specific biological questions. Always verify the subset contains sufficient data for meaningful analysis.
 
-.. warning::  
-   Overly restrictive subsetting criteria can lead to loss of important data. Ensure that the subset is representative of the full biological diversity of the original dataset.
-
 ### Applications
 
 - **Targeted Analysis**:  

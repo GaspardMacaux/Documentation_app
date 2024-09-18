@@ -4,15 +4,7 @@ Dimensional Reduction
 
 ### Overview
 
-Dimensional reduction is a crucial step in simplifying high-dimensional single-cell RNA sequencing data, making it easier to analyze and interpret. In this application, **Principal Component Analysis (PCA)** is the sole technique used for dimensional reduction, followed by an **Elbow Plot** to help determine the number of principal components (PCs) to retain.
-
-### Why PCA?
-
-**PCA** is chosen for several reasons:
-
-- **Simplicity and Speed**: PCA is computationally efficient and scales well with large datasets.
-- **Interpretability**: PCA linearly reduces the data, making the principal components easy to interpret in terms of variance explained by each component.
-- **Initial Dimensional Reduction**: PCA is often used as the first step before further downstream analyses like clustering.
+Dimensional reduction is a crucial step in simplifying high-dimensional single-cell RNA sequencing data, making it easier to analyze and interpret. In this application, **Principal Component Analysis (PCA)** is used for dimensional reduction, followed by an **Elbow Plot** to help determine the number of principal components (PCs) to retain.
 
 ### How to Perform Dimensional Reduction
 
@@ -37,7 +29,6 @@ Dimensional reduction is a crucial step in simplifying high-dimensional single-c
 3. **Elbow Plot**:  
    After PCA, the **Elbow Plot** is used to determine the optimal number of components to retain. The Elbow Plot shows how much variance is explained by each component, with the "elbow" indicating the point where adding more components yields diminishing returns.
 
-   The plot is generated automatically when PCA is complete, and no additional button is needed to trigger it.
 
    .. image:: ../_static/images/single_dataset_analysis/elbow_plot.png
       :width: 90%
@@ -47,7 +38,7 @@ Dimensional reduction is a crucial step in simplifying high-dimensional single-c
    PCA is a fast and effective technique for reducing the dimensionality of large datasets. Use the Elbow Plot to determine how many components to retain for further analysis.
 
 .. warning::
-   Retaining too few components can lead to oversimplification, while retaining too many may introduce noise. For single-cell RNA sequencing data, retaining between 10 and 20 principal components is generally recommended.
+   Retaining too few components can lead to oversimplification, while retaining too many may introduce noise. For single-cell RNA sequencing data, retaining between 5 and 20 principal components is generally recommended.
 
 
 ### Common Issues

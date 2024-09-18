@@ -40,20 +40,3 @@ Subsetting allows users to focus on specific clusters or genes of interest by cr
 ### Downloading the Subset
 
 - After applying the subset, you can download the new subsetted Seurat object by clicking "Save subset as .RDS".
-
-.. tip::  
-   Subsetting can help reduce computational load and focus on specific biological questions. However, careful consideration is required to ensure the subset still captures the essential biological diversity of the dataset.
-
-.. warning::  
-   Subsetting may lead to loss of important data if not done carefully. Ensure that the subset contains sufficient cells or genes for meaningful analysis.
-
-### Common Issues
-
-- **Subset is too small**:  
-   If the resulting subset is too small, ensure that enough clusters or genes are included to retain a meaningful sample size.
-
-- **No cells found with the selected identities**:  
-   Ensure that the selected clusters or genes exist in the dataset and that the expression threshold is set appropriately.
-
-- **Loss of biological diversity**:  
-   Verify that the subset still represents the full biological diversity necessary for your analysis objectives.

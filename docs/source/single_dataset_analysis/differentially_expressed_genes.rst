@@ -26,18 +26,30 @@ In this application, DEGs are identified by comparing the expression levels of g
    - **Log Fold Change Threshold**: The minimum log fold change to consider a gene differentially expressed. By default, this is set to 0.25, meaning that only genes with at least a 1.19x difference in expression will be considered.
    - **Percentage Threshold**: The minimum percentage of cells in each cluster that must express the gene for it to be included in the analysis. For example, a threshold of 0.1 (10%) means the gene must be expressed in at least 10% of the cells in one cluster.
 
+2. **Run DEG Analysis**:  
+   After selecting the parameters, click **"Find DEGs"** to perform the differential expression analysis. The application will identify genes that are significantly different between the selected clusters based on the provided thresholds.
+
    .. image:: ../_static/images/single_dataset_analysis/differentially_expressed_genes.png
       :width: 90%
       :align: center
-
-2. **Run DEG Analysis**:  
-   After selecting the parameters, click **"Find DEGs"** to perform the differential expression analysis. The application will identify genes that are significantly different between the selected clusters based on the provided thresholds.
 
 3. **Download Results**:  
    After the analysis, you can download the identified DEGs as a CSV file. The DEGs are displayed in a table where each gene's log fold change, p-value, and adjusted p-value are shown.
 
    - **Download DEGs**: Click **Download differentially expressed genes** to download the results in CSV format.
-   - **Save Seurat Object**: Save the entire Seurat object, including all computed DEGs, by clicking **Save Seurat Object**.
+   - **Save Seurat Object**: Save the entire Seurat object, by clicking **Save Seurat Object**.
+
+4. *Interacting with DEG Results:**
+
+- The `gene` column in the DEGs table is interactive. Clicking on a gene name will attempt to open a new tab or window in your browser, directing you to the Protein Atlas page for that gene.
+- If clicking the gene name does not open the link, ensure that pop-ups are enabled for this site in your web browser.
+
+.. tip::
+   Make sure your web browser allows pop-ups from this site to enable direct navigation to external gene resources.
+
+**Technical Details:**
+
+The application uses the Protein Atlas API to search for the Ensembl ID of the selected gene and directs you to the corresponding page.
 
 .. tip::
    Start with a **log fold change threshold** of 0.25 and a **percentage threshold** of 10% (0.1) to get a balanced set of DEGs. If you find too many DEGs, try increasing the thresholds.
@@ -53,6 +65,3 @@ In this application, DEGs are identified by comparing the expression levels of g
 
 - **Too Many DEGs**:  
    If you find too many DEGs, try increasing the log fold change threshold or decreasing the percentage threshold. This will help you focus on genes with stronger expression differences and filter out those that may not be biologically relevant.
-
-- **Error During DEG Calculation**:  
-   If an error occurs, ensure that the dataset is properly formatted and the Seurat object is loaded. Double-check that you have set the thresholds correctly and that the selected clusters contain enough cells for meaningful comparison.

@@ -19,14 +19,6 @@ This section allows users to manually assign or modify cell type identities base
 .. tip::
    Use known marker genes to guide the assignment of cell type identities. Consult relevant literature or databases for marker gene information.
 
-.. warning::
-   Incorrect assignment of cell type identities can lead to misinterpretation of results. Make sure to validate assignments using multiple lines of evidence.
-
 ### Visualizing Assigned Identities
 
 - **UMAP/t-SNE Plot**: Visualize the updated cell type identities on the dimensional reduction plot.
-
-### Common Issues
-
-- **Misassigned identities**: Review marker gene expression and clustering results to ensure correct assignments.
-- **Overlap between clusters**: This may indicate a need for further dimensional reduction or alternative clustering methods.

@@ -21,8 +21,5 @@ Heatmaps provide a matrix-like visualization where each row represents a gene, a
 .. warning::
    Be cautious when selecting too many genes or clusters, as this can result in dense heatmaps that are difficult to interpret. Focus on a subset of the most informative genes.
 
-**Applications of Heatmaps:**
 
-- **Pattern Recognition:** Identify clusters or conditions with unique gene expression signatures.
-- **Comparative Analysis:** Compare gene expression across different clusters or datasets to understand biological differences and similarities.
 

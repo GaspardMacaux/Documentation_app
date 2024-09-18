@@ -50,9 +50,6 @@ Visualizing gene expression is an essential step in understanding the distributi
 .. tip::  
    Use the Feature Plot to visualize spatial gene expression patterns and identify co-expressed genes within the same cluster.
 
-.. warning::  
-   Ensure that selected genes are present in the dataset to avoid missing data errors. Cross-check gene availability using the gene list provided during the data upload step.
-
 ### Additional Analysis
 
 - **Gene Expression Summary**:  

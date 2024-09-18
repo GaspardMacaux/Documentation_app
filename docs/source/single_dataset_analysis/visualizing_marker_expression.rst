@@ -38,17 +38,6 @@ Visualizing marker gene expression is essential for understanding the biological
 .. tip::  
    Use Feature Plot for spatial visualization of gene expression on dimensional reduction plots (e.g., UMAP, t-SNE). Violin Plot is useful for assessing the distribution and variability of gene expression across clusters.
 
-.. warning::  
-   Make sure the genes selected for visualization are relevant to the biological question. Including irrelevant genes can clutter the plot and complicate interpretation.
-
 ### Exporting Plots
 
 You can export the generated plots in various formats such as PNG by clicking the "Download" button provided for each plot type.
-
-### Troubleshooting
-
-- **Plot Appears Blank**:  
-  Ensure that the selected genes are present in the dataset. Check for correct spelling and gene symbols.
-
-- **Overlapping Clusters in Plots**:  
-  Adjust the visualization parameters or try using different plot types to better distinguish between clusters.

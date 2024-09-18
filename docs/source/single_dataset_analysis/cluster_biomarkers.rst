@@ -28,9 +28,6 @@ Cluster biomarkers are genes that are uniquely or highly expressed in specific c
    :align: center
 
 .. tip::  
-   Biomarkers with a high log fold change and expression in a significant percentage of cells within a cluster are often more robust and reliable.
-
-.. warning::  
    Selecting biomarkers based solely on statistical significance may lead to false positives. Consider the biological relevance and the context of your analysis.
 
 ### Output and Download Options
@@ -39,16 +36,3 @@ Cluster biomarkers are genes that are uniquely or highly expressed in specific c
   After running the analysis:
   - The table displaying the differentially expressed genes for the selected clusters will be shown.
   - Click "Download table (csv)" to export the identified biomarkers and their statistics.
-
-### Common Issues
-
-- **No biomarkers identified**:  
-   If no biomarkers are found, consider lowering the `Log2 Fold Change threshold` or the `Minimum percentage threshold`. This adjustment can make the criteria less stringent and may reveal more potential biomarkers.
-
-- **Too many biomarkers**:  
-   If the results include too many biomarkers, increase the thresholds to focus on genes with stronger differential expression or a higher percentage of expression within the cluster.
-
-### Troubleshooting
-
-- **Error During Analysis**:  
-   Ensure that the clusters selected are distinct and that input parameters such as `Log2 Fold Change threshold` and `Minimum percentage threshold` are appropriately set. Verify that the dataset is correctly formatted and loaded.

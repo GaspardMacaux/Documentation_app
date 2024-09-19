@@ -66,9 +66,6 @@ Docker Desktop provides an easy interface for managing running containers:
   - Use the **Start**, **Stop**, and **Restart** buttons to control the state of each container.
 
 
-.. image:: /_static/images/introduction.png
-   :width: 90%
-   :align: center
 
 
 

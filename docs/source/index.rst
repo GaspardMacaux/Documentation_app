@@ -18,6 +18,7 @@ We hope you will find this application useful and informative. Happy exploring!
    :caption: Welcome
 
    introduction
+   Installation
 
 .. toctree::
    :maxdepth: 2

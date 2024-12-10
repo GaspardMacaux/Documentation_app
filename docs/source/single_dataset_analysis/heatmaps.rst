@@ -3,27 +3,79 @@ Heat Maps & Dual Expression
 ===============================
 
 ### Overview
+Heat maps and dual expression analyses are powerful tools for visualizing gene expression patterns across your dataset. Heat maps show expression levels of multiple genes across clusters, while dual expression analysis reveals relationships between pairs of genes.
 
-Heat maps provide a visual representation of gene expression levels across different clusters. Dual expression analysis allows the exploration of co-expression patterns between two genes.
+### Heat Map Analysis
 
-### Creating Heat Maps
+#### Features and Options
+- **Gene Selection**:
+  * Choose specific genes of interest
+  * Select multiple genes simultaneously
+  * Use search function for quick gene finding
 
-**Select Genes for Heatmap**: Choose genes from the dropdown menu to include in the heatmap.
+- **Clustering Options**:
+  * Specify clusters to include
+  * Select/deselect all clusters
+  * Customize cluster order
 
-**Generate Heatmap**: Click "Generate Heatmap" to visualize the expression patterns.
+- **Visualization Settings**:
+  * Adjust color scheme
+  * Set resolution for export
+  * Modify plot dimensions
 
-.. tip::
-   Selecting a limited number of highly variable genes for heatmap visualization can make patterns more evident and easier to interpret.
+#### Interpretation Guide
+- **Color Intensity**:
+  * Darker = Higher expression
+  * Lighter = Lower expression
+  * White = No expression
+
+- **Clustering Patterns**:
+  * Rows = Genes
+  * Columns = Clusters/Cells
+  * Dendrograms show relationships
 
 ### Dual Expression Analysis
 
-1. **Select Genes for Dual Expression**: Choose two genes to analyze their co-expression patterns.
-2. **Run Dual Expression Analysis**: Click "Run Dual Expression" to generate the plot.
+#### Setup and Options
+- **Gene Selection**:
+  * Pick first target gene
+  * Select second gene for comparison
+  * Option to include specific clusters
+
+- **Visualization Controls**:
+  * Point size adjustment
+  * Color scheme selection
+  * Resolution settings
+
+#### Analysis Features
+- **Co-expression Patterns**:
+  * X-axis = First gene
+  * Y-axis = Second gene
+  * Points = Individual cells
+
+- **Pattern Interpretation**:
+  * Diagonal = Correlated expression
+  * Scattered = Independent expression
+  * Clusters = Cell populations
+
+.. tip::
+   * Start with known marker genes
+   * Use scaled data for better comparison
+   * Consider biological relationships
+   * Export high-resolution for publication
 
 .. warning::
-   Heat maps with too many genes can become cluttered and hard to interpret. Consider filtering genes based on variance or biological relevance.
+   * Avoid too many genes in heatmaps
+   * Check gene name spelling
+   * Consider expression ranges
+   * Validate unexpected patterns
 
-### Common Issues
+### Troubleshooting Guide
 
-- **Heatmap is too dense**: Reduce the number of genes visualized or increase the clustering granularity.
-- **Dual expression plot shows no pattern**: Ensure that the selected genes are co-expressed and relevant to the analysis.
+Problem | Cause | Solution
+--------|-------|----------
+Cluttered heatmap | Too many genes | Reduce gene selection
+No visible patterns | Poor scaling | Adjust color scales
+Missing data | Gene name errors | Check gene identifiers
+Low resolution | Export settings | Increase DPI
+Unclear relationships | Noisy data | Filter low-quality cells

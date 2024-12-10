@@ -3,37 +3,65 @@ Load Dataset
 ====================
 
 ### Overview
+The dataset loading section is the entry point for analyzing your single-cell RNA sequencing data. This section guides you through loading and initializing your data for downstream analysis.
 
-In this section, you will learn how to load a single-cell RNA sequencing dataset into the application for analysis. The application supports various data formats and offers several options to configure the loading process according to the dataset's type.
+### Data Types and Requirements
 
-### Supported Data Formats
+#### Option 1: Raw 10X Genomics Data
+Required files (compressed in a single `.zip`):
+- `barcodes.tsv.gz`: Contains cell barcodes
+- `matrix.mtx.gz`: Contains the expression matrix
+- `features.tsv.gz`: Contains gene information
+  
+#### Option 2: Pre-processed Seurat Object
+- Format: `.rds` file
+- Requirements: Must be a valid Seurat object (version 4 or higher)
 
-- **10X Genomics**: `.zip` file containing `barcodes.tsv.gz`, `matrix.mtx.gz`, and `features.tsv.gz`.
-- **Seurat Objects**: `.rds` format, which is an R data file.
+### Step-by-Step Loading Process
 
-### Steps to Load a Dataset
+1. **Select Species**
+   - Choose between "Mouse" or "Human"
+   - This selection affects gene name formatting and mitochondrial gene detection
 
-1. **Select Dataset Type**: Choose between "snRNA-seq" or "Multiome" based on your dataset.
-2. **Upload Data**: Use the "Choose File" button to select your dataset file. Ensure it's a `.zip` file or a `.rds` file.
-3. **Configure Options**:
-   - For 10X Genomics data, make sure all three files (`barcodes.tsv.gz`, `matrix.mtx.gz`, and `features.tsv.gz`) are included in the `.zip`.
-   - For Seurat Objects, ensure the `.rds` file is valid and not corrupted.
+2. **Choose Data Type**
+   - **snRNA-seq**: For single-nucleus RNA sequencing data
+   - **Multiome**: For multi-modal data including RNA-seq
+   
+3. **Upload Data**
+   - Click "Choose File" to select your data
+   - For 10X data: Select your `.zip` file
+   - For Seurat object: Select your `.rds` file
+
+4. **Data Processing**
+   The application will automatically:
+   - Validate file format and content
+   - Create a Seurat object (for 10X data)
+   - Initialize necessary parameters
+   - Prepare data for analysis
 
 .. image:: ../_static/images/single_dataset_analysis/image_load_data.png
    :width: 90%
    :align: center
 
+### Important Notes
 
 .. tip::
-   Before uploading, double-check that the dataset file is in the correct format and contains all necessary components. This can prevent errors during loading.
+   - Ensure your files are properly formatted before uploading
+   - Check file sizes - large datasets may take longer to process
+   - Keep original files backed up before processing
 
 .. warning::
-   If the file format is incorrect or missing necessary files, the loading process will fail, and you will receive an error message.
+   Common Issues:
+   - Missing files in ZIP archive
+   - Corrupted .rds files
+   - Incompatible Seurat object versions
+   - Memory limitations with very large datasets
 
-### Common Issues and Solutions
+### Troubleshooting
 
-- **Error: Unsupported file type**: Make sure the file extension is correct (.zip for 10X or .rds for Seurat).
-- **Error: File not found**: Check the file path and ensure the file is accessible.
-- **Error: Missing files in `.zip`**: Ensure all required files (`barcodes.tsv.gz`, `matrix.mtx.gz`, `features.tsv.gz`) are present in the archive.
-
+Problem | Solution
+--------|----------
+"Invalid file format" | Check if your ZIP contains all required files
+"Memory error" | Try reducing dataset size or increasing available RAM
+"Missing gene names" | Verify features.tsv.gz format
 

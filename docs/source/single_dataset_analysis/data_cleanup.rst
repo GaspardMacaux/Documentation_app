@@ -3,40 +3,109 @@ Data Cleanup & Variable Features
 ==============================
 
 ### Overview
+Quality control (QC) and data cleanup are essential steps in single-cell RNA sequencing analysis. This process ensures reliable results by removing low-quality cells and normalizing gene expression data.
 
-Data cleanup is a crucial step in the preprocessing of single-cell RNA sequencing data. It involves filtering out low-quality cells and normalizing the data to prepare it for downstream analysis.
+### Quality Control Metrics
 
-### Steps for Data Cleanup
+#### 1. Unique Genes (nFeature_RNA)
+- **What it measures**: Number of different genes detected in each cell
+- **Why it matters**: 
+  * Too few genes: May indicate empty droplets or dead cells
+  * Too many genes: May indicate doublets (two cells captured together)
+- **Typical ranges**:
+  * scRNA-seq: 500-5000 genes
+  * snRNA-seq: 200-3000 genes
 
-1. **Set Quality Thresholds**:
-   - **Unique Genes Detected**: Adjust the range slider to filter cells based on the number of unique genes detected.
-   - **Mitochondrial Content**: Set a maximum percentage for mitochondrial gene content to exclude low-quality cells.
-   
-2. **Apply Quality Filters**: Click "Apply QC Filters" to remove cells that do not meet the quality criteria.
+#### 2. Mitochondrial Content
+- **What it measures**: Percentage of transcripts from mitochondrial genes
+- **Why it matters**: High mitochondrial content often indicates dying cells
+- **Typical thresholds**:
+  * scRNA-seq: <5-10%
+  * snRNA-seq: <2-5% (lower due to nuclear isolation)
 
-3. **Normalize Data**: Normalize the dataset to scale the expression levels across cells.
+### Step-by-Step Quality Control
 
-.. image:: ../_static/images/single_dataset_analysis/data_cleanup.png
-   :width: 90%
-   :align: center
+1. **Examine QC Metrics**
+   - View violin plots of key metrics
+   - Look for clear outlier populations
+   - Consider biological expectations for your cell types
+
+2. **Set Quality Thresholds**
+   - Adjust the nFeature slider based on your distribution
+   - Set mitochondrial percentage threshold
+   - Consider your biological context when setting cutoffs
+
+3. **Apply Filters**
+   - Click "Apply QC Filters" to remove low-quality cells
+   - Monitor the number of cells retained
+   - Check the distribution of remaining cells
+
+### Normalization
+
+1. **Scale Factor**
+   - Default: 10,000 (standard for most analyses)
+   - Adjustable based on library size distribution
+   - Higher factors can help with very sparse data
+
+2. **Normalization Method**
+   - Log-normalization: Standard approach
+   - Accounts for sequencing depth differences
+   - Makes data more suitable for downstream analysis
+
+### Variable Feature Selection
+
+#### Why It's Important
+- Reduces computational overhead
+- Focuses analysis on biologically meaningful genes
+- Improves clustering and dimensional reduction
+
+#### Selection Process
+1. **Choose Number of Features**
+   - Default: 2000 genes
+   - Adjust based on:
+     * Dataset size
+     * Biological complexity
+     * Analysis goals
+
+2. **Selection Method**
+   - Variance-stabilizing transformation (VST)
+   - Identifies genes with high cell-to-cell variation
+   - Accounts for mean-variance relationship
+
+### Visualization and Quality Assessment
+
+1. **QC Violin Plots**
+   - Shows distribution of key metrics
+   - Helps identify appropriate cutoffs
+   - Updates after filtering
+
+2. **Feature-Feature Plots**
+   - Relationship between different metrics
+   - Helps identify outlier populations
+   - Guides threshold selection
+
+3. **Variable Features Plot**
+   - Shows most variable genes
+   - Highlights selection thresholds
+   - Helps verify feature selection
 
 .. tip::
-   For scRNA-seq data, a mitochondrial content below 5% is typically considered acceptable to avoid dead or dying cells.
+   * Start with standard thresholds and adjust based on your data
+   * Consider your biological question when setting cutoffs
+   * Document your QC decisions for reproducibility
 
 .. warning::
-   Overly strict quality filters can lead to the exclusion of too many cells, potentially losing important biological information. Adjust thresholds carefully.
+   * Overly strict filtering can remove rare cell types
+   * Too lenient filtering can introduce technical artifacts
+   * Always balance stringency with biological relevance
 
-### Variable Features Selection
+### Common Issues and Solutions
 
-Selecting variable features is essential for downstream analysis like clustering and dimensional reduction.
+Problem | Possible Cause | Solution
+--------|---------------|----------
+Many cells with low gene counts | Poor cell quality or empty droplets | Adjust minimum feature threshold
+High mitochondrial content | Cell stress or death during processing | Review sample preparation protocol
+Batch effects visible | Technical variations between samples | Consider batch correction methods
+Too few cells passing QC | Overly strict thresholds | Revise filtering criteria
+Unusual gene distributions | Sample-specific characteristics | Adjust normalization parameters
 
-1. **Set Number of Variable Features**: Choose the number of highly variable genes to use in the analysis.
-2. **Visualize Variable Features**: Use the plots provided to assess the variability and quality of the selected genes.
-
-.. tip::
-   A common choice is to select 2000 variable features, but this can be adjusted depending on the dataset size and complexity.
-
-### Troubleshooting
-
-- **No cells pass the filter**: This might indicate that the quality thresholds are too strict. Try lowering the thresholds and applying the filters again.
-- **High mitochondrial content**: This can indicate poor sample quality. Consider revising your data preparation protocol.

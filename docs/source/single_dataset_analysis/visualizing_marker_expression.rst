@@ -3,15 +3,53 @@ Visualizing Marker Expression
 ===================================
 
 ### Overview
-
 Visualizing marker gene expression is essential for understanding the biological significance of different cell clusters and their heterogeneity. The application provides multiple visualization options to explore gene expression data effectively.
 
 ### Available Plot Types
 
-- **Feature Plot**: Displays the spatial distribution of one or more genes on a UMAP or t-SNE plot, showing expression levels across clusters.
-- **Violin Plot**: Illustrates the distribution of gene expression levels within each cluster, helping to understand the variability and expression patterns.
-- **Dot Plot**: Represents the average expression levels of selected genes across multiple clusters and conditions. Dot size indicates the percentage of cells expressing the gene in each cluster.
-- **Ridge Plot**: Visualizes the distribution of gene expression levels across clusters in a layered fashion, providing a clear view of differences in expression.
+#### 1. Feature Plot
+- **Purpose**: Spatial visualization of gene expression
+- **Features**:
+  * Expression levels shown on UMAP
+  * Color intensity indicates expression level
+  * Multiple genes can be shown together
+- **Options**:
+  * Min/Max cutoffs for expression
+  * Remove axes/legend
+  * Show co-expression
+  * Color scheme selection
+
+#### 2. Violin Plot
+- **Purpose**: Distribution of expression within clusters
+- **Features**:
+  * Shows expression spread per cluster
+  * Points represent individual cells
+  * Width indicates cell density
+- **Options**:
+  * Hide individual points
+  * Remove axes/legend
+  * Adjust point size
+
+#### 3. Dot Plot
+- **Purpose**: Summary of expression patterns
+- **Features**:
+  * Dot size = percentage expressing
+  * Color intensity = average expression
+  * Multiple genes across clusters
+- **Options**:
+  * Cluster ordering
+  * Axis rotation
+  * Remove axes/legend
+
+#### 4. Ridge Plot
+- **Purpose**: Distribution comparison across clusters
+- **Features**:
+  * Layered density plots
+  * Clear expression differences
+  * Smooth visualization
+- **Options**:
+  * Remove axes/legend
+  * Adjust plot parameters
 
 ### How to Visualize Marker Expression
 
@@ -22,22 +60,37 @@ Visualizing marker gene expression is essential for understanding the biological
       :width: 90%
       :align: center
 
-2. **Choose Plot Type**:  
-   Select the desired plot type (Feature Plot, Violin Plot, Dot Plot, or Ridge Plot) to display the expression data.
+2. **Choose Plot Type and Settings**:
+   * Select desired visualization
+   * Adjust specific plot parameters
+   * Choose display options
 
-3. **Customize Plot Settings**:  
-   Adjust the settings such as axes labels, text size, and point size to tailor the visualization to your preferences. For Feature Plots, you can also set the minimum and maximum cutoffs for expression levels.
-
-4. **Generate Plot**:  
-   Click the corresponding button to generate the plot. For example, click "Display FeaturePlot" for feature plots or "Display VlnPlot" for violin plots.
+3. **Generate and Customize Plot**:
+   * Click display button
+   * Modify aesthetics
+   * Add/remove features
 
    .. image:: ../_static/images/single_dataset_analysis/visualizing_marker_expression.png
       :width: 90%
       :align: center
 
-.. tip::  
-   Use Feature Plot for spatial visualization of gene expression on dimensional reduction plots (e.g., UMAP, t-SNE). Violin Plot is useful for assessing the distribution and variability of gene expression across clusters.
+.. tip::
+   * Use Feature Plot for spatial patterns
+   * Violin Plot for expression distributions
+   * Dot Plot for multi-gene comparisons
+   * Ridge Plot for distribution overlays
 
-### Exporting Plots
+.. warning::
+   * Check expression scales
+   * Consider cluster sizes
+   * Watch for outliers
+   * Validate patterns
 
-You can export the generated plots in various formats such as PNG by clicking the "Download" button provided for each plot type.
+### Common Issues and Solutions
+
+Problem | Cause | Solution
+--------|-------|----------
+No expression visible | Wrong cutoffs | Adjust min/max values
+Overlapping points | Too many cells | Reduce point size
+Unclear patterns | Poor scaling | Try different cutoffs
+Missing clusters | Wrong grouping | Check cluster selection

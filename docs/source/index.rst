@@ -28,6 +28,7 @@ We hope you will find this application useful and informative. Happy exploring!
    single_dataset_analysis/data_cleanup
    single_dataset_analysis/dimentional_reduction
    single_dataset_analysis/clustering
+   single_dataset_analysis/doublet_finder
    single_dataset_analysis/differentially_expressed_genes
    single_dataset_analysis/visualizing_marker_expression
    single_dataset_analysis/heatmaps
@@ -54,6 +55,19 @@ We hope you will find this application useful and informative. Happy exploring!
 
    trajectory_analysis/trajectory_analysis
    trajectory_analysis/genes_pseudotime  
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Nichenet Analysis
+
+   nichenet_analysis/nichenet_load_and_define
+   nichenet_analysis/nichenet_run_and_view
+   nichenet_analysis/circos_plot
+   nichenet_analysis/multinichenet_load_and_define
+   nichenet_analysis/multinichenet_run_and_view
+   nichenet_analysis/genes_set_ligan_inferance
+   nichenet_analysis/lr_activity_plots
+   nichenet_analysis/regulatory_network
 
 .. toctree::
    :maxdepth: 2

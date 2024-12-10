@@ -3,48 +3,130 @@ Dimensional Reduction
 ==========================
 
 ### Overview
+Single-cell RNA sequencing data typically contains thousands of genes (dimensions) per cell. Dimensional reduction helps visualize and analyze this complex data by reducing it to a manageable number of dimensions while preserving important biological relationships.
 
-Dimensional reduction is a crucial step in simplifying high-dimensional single-cell RNA sequencing data, making it easier to analyze and interpret. In this application, **Principal Component Analysis (PCA)** is used for dimensional reduction, followed by an **Elbow Plot** to help determine the number of principal components (PCs) to retain.
+### Principal Component Analysis (PCA)
 
-### How to Perform Dimensional Reduction
+#### Theory and Importance
+- **What is PCA?**
+  * Mathematical technique to reduce data dimensionality
+  * Transforms correlated variables into uncorrelated principal components
+  * Each PC captures maximum remaining variance in the data
 
-1. **Scale the Data & Perform PCA**:  
-   In this application, scaling the data and running PCA are combined into a single operation.
+- **Why Use PCA?**
+  * Reduces computational complexity
+  * Removes technical noise
+  * Highlights main sources of variation
+  * Facilitates visualization and clustering
 
-   - Click **"Scale Data & PCA"** to perform both steps simultaneously.
-   - **Scaling**: The data is scaled so that the mean expression of each gene across all cells is 0, and the variance is 1. This prevents genes with higher expression from dominating the PCA.
-   - **PCA**: After scaling, PCA is automatically performed. The principal components are computed, capturing the maximum variance in the dataset.
+#### Step-by-Step Process
 
-2. **View PCA Results and Plots**:  
-   Once PCA is complete, the results and corresponding plots are automatically displayed:
-   - **PCA Results**: A summary of the principal components is shown, including how much variance each component explains.
-   - **Dimensional Loading Plot**: This plot displays the loadings of the principal components, helping you understand the contribution of individual genes to the principal components.
-   - **PCA Plot**: A scatter plot of the top principal components, showing how the cells are distributed across the principal components.
+1. **Data Scaling**
+   - **Purpose**: Normalize gene expression variation
+   - **Process**:
+     * Centers gene expression to mean 0
+     * Scales to unit variance
+   - **Why Important**: 
+     * Prevents highly expressed genes from dominating
+     * Makes genes comparable
+
+2. **PCA Calculation**
+   - Click "Scale Data & PCA"
+   - Application automatically:
+     * Scales the data
+     * Calculates principal components
+     * Generates visualizations
 
    .. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
       :width: 90%
       :align: center
 
+3. **Output Visualization**
+   - **PCA Results Table**:
+     * Shows variance explained by each PC
+     * Lists cumulative variance
+   
+   - **Loading Plot**:
+     * Shows gene contributions to PCs
+     * Helps identify influential genes
 
-3. **Elbow Plot**:  
-   After PCA, the **Elbow Plot** is used to determine the optimal number of components to retain. The Elbow Plot shows how much variance is explained by each component, with the "elbow" indicating the point where adding more components yields diminishing returns.
+### Determining Optimal PC Number
 
+#### Elbow Plot Analysis
+- **What it Shows**:
+  * Y-axis: Variance explained
+  * X-axis: Principal components
+  * "Elbow" indicates diminishing returns
 
    .. image:: ../_static/images/single_dataset_analysis/elbow_plot.png
       :width: 90%
       :align: center
 
+- **How to Interpret**:
+  1. Look for sharp bend ("elbow")
+  2. Consider cumulative variance
+  3. Balance detail vs. noise
+
+#### Recommendations
+- **Typical Ranges**:
+  * scRNA-seq: 10-30 PCs
+  * snRNA-seq: 15-40 PCs
+  * Complex tissues: May need more
+
+- **Factors to Consider**:
+  * Dataset size
+  * Cell type heterogeneity
+  * Biological complexity
+  * Analysis goals
+
 .. tip::
-   PCA is a fast and effective technique for reducing the dimensionality of large datasets. Use the Elbow Plot to determine how many components to retain for further analysis.
+   **Best Practices**
+   * Start with standard range (10-30 PCs)
+   * Adjust based on elbow plot
+   * Consider biological complexity
+   * Document your choice for reproducibility
 
 .. warning::
-   Retaining too few components can lead to oversimplification, while retaining too many may introduce noise. For single-cell RNA sequencing data, retaining between 5 and 20 principal components is generally recommended.
+   **Common Pitfalls**
+   * Too few PCs: Loss of biological signal
+   * Too many PCs: Including noise
+   * Ignoring elbow plot: Suboptimal analysis
+   * Not considering dataset specifics
 
+### Quality Control Checks
 
-### Common Issues
+#### Signs of Good Quality
+- Clear elbow in variance plot
+- Smooth decline in explained variance
+- Biologically relevant gene loadings
 
-- **Error During Data Scaling**:  
-   Ensure that the input data is correctly formatted and contains valid gene names before performing scaling and PCA. If an error occurs during scaling, it is typically due to improperly formatted data.
+#### Red Flags
+- No clear elbow
+- Very low variance explained
+- Unusual patterns in loadings
 
-- **Variance Explained by PCA is Too Low**:  
-   If the variance explained by the top principal components is too low, you may need to examine the dataset quality or increase the number of components. Using too few components may lead to an oversimplified analysis.
+### Troubleshooting Guide
+
+Problem | Possible Cause | Solution
+--------|---------------|----------
+No clear elbow | High data complexity | Consider biological context
+Low variance explained | Poor data quality | Review QC metrics
+Batch effects dominate PCs | Technical variation | Consider batch correction
+Strange loading patterns | Data quality issues | Check gene expression
+
+### Advanced Considerations
+
+1. **Batch Effects**
+   - Look for batch-related PCs
+   - Consider batch correction if needed
+   - Monitor technical covariates
+
+2. **Cell Cycle Effects**
+   - Identify cell cycle-related PCs
+   - Decide whether to regress out
+   - Balance biological vs. technical
+
+3. **Gene Selection**
+   - Impact of variable features
+   - Consider biological pathways
+   - Monitor key marker genes

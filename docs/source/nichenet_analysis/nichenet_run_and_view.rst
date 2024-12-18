@@ -1,174 +1,94 @@
+==========================
 NicheNet Results Visualization
-=================================
+==========================
 
-### Overview
-The results section provides comprehensive visualization and analysis options for understanding ligand-receptor interactions and their downstream effects.
+Overview
+--------
+After running NicheNet analysis, this section allows you to visualize and export your results in various formats. Each visualization type provides different insights into cell-cell communication patterns.
 
-### Available Output Types
+Available Visualizations
+----------------------
 
-#### 1. Ligand Activities
-- **Purpose**: Shows prioritized ligands and their activity scores
-- **Content**:
-  * Ligand names
-  * Activity scores
-  * Statistical measures
-  * Regulatory potential
+Ligand Activities View
+^^^^^^^^^^^^^^^^^^^^^
+* Shows prioritized ligands and their influence scores
+* Helps identify key signaling molecules
+* Provides statistical significance measures
+* Can be downloaded as table or plot
 
-- **Interpretation**:
-  * Higher scores = stronger influence
-  * Prioritize top-scoring ligands
-  * Consider biological relevance
-  * Check expression patterns
+Top Ligands and Targets
+^^^^^^^^^^^^^^^^^^^^^^
+* Displays most influential ligands in your system
+* Shows which genes are being regulated
+* Ranked by importance and statistical significance
+* Available in table format
 
-#### 2. Top Ligands & Targets
-- **Top Ligands Display**:
-  * Most influential ligands
-  * Based on activity scores
-  * Ranked by importance
-  * Expression-filtered
+Expression Visualizations
+-----------------------
 
-- **Top Targets View**:
-  * Affected target genes
-  * Expression changes
-  * Regulatory strength
-  * Pathway involvement
+Ligand Expression Dotplot
+^^^^^^^^^^^^^^^^^^^^^^^^
+* Shows expression patterns across cell types
+* Dot size indicates percentage of expressing cells
+* Color intensity shows expression level
+* Useful for identifying source cells
 
-#### 3. Visualization Plots
+Differential Expression Heatmap
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Visualizes expression changes between conditions
+* Uses color scale to show up/down regulation
+* Clusters similar expression patterns
+* Highlights significant changes
 
-A. **Ligand Expression Dotplot**
-- **Features**:
-  * Cell type-specific expression
-  * Dot size = percentage expressing
-  * Color = expression level
-  * Cluster organization
+Interaction Visualizations
+------------------------
 
-- **Settings**:
-  * Resolution: 72-1200 DPI
-  * Export format: TIFF
-  * Size adjustable
-  * Color schemes
+Ligand-Target Heatmap
+^^^^^^^^^^^^^^^^^^^
+* Maps ligands to their target genes
+* Shows strength of regulatory relationships
+* Helps identify key pathways
+* Reveals regulatory patterns
 
-B. **Differential Expression Heatmap**
-- **Content**:
-  * Expression changes
-  * Condition comparison
-  * Statistical significance
-  * Cluster patterns
+Ligand-Receptor Heatmap
+^^^^^^^^^^^^^^^^^^^^
+* Displays direct interaction partners
+* Shows which receptors bind which ligands
+* Indicates interaction strengths
+* Useful for mechanism understanding
 
-- **Parameters**:
-  * Color scale
-  * Clustering options
-  * Label settings
-  * Size control
+Data Export Options
+-----------------
 
-C. **Ligand-Target Heatmap**
-- **Shows**:
-  * Regulatory connections
-  * Interaction strengths
-  * Expression patterns
-  * Network structure
+1. **For Plots**
+   * Set resolution (72-1200 DPI)
+   * Click "Download Result"
+   * Choose save location
+   * TIFF format for high quality
 
-- **Customization**:
-  * Clustering methods
-  * Color gradients
-  * Size parameters
-  * Label options
+2. **For Data Tables**
+   * Select matrix or dataframe view
+   * Click download
+   * CSV format
+   * Complete with headers
 
-D. **Ligand-Receptor Heatmap**
-- **Displays**:
-  * Direct interactions
-  * Expression correlation
-  * Cell type specificity
-  * Interaction strength
+Using the Interface
+-----------------
 
-- **Controls**:
-  * Resolution settings
-  * Color schemes
-  * Size adjustment
-  * Label management
+1. Select Output Type:
+   * Choose from dropdown menu
+   * Click "View Results"
+   * Wait for visualization
+   * Adjust settings if needed
 
-#### 4. Data Matrices
+2. Export Results:
+   * Set resolution if downloading plot
+   * Click download button
+   * Select save location
+   * Check exported file
 
-A. **Ligand-Target Matrix**
-- **Structure**:
-  * Rows = targets
-  * Columns = ligands
-  * Values = interaction scores
-  * Binary connections
+.. note::
+   For publication-quality figures, use at least 300 DPI resolution.
 
-- **Usage**:
-  * Network analysis
-  * Pattern identification
-  * Pathway mapping
-  * Validation
-
-B. **Ligand-Target Dataframe**
-- **Content**:
-  * Detailed interactions
-  * Statistical measures
-  * Expression data
-  * Metadata
-
-- **Applications**:
-  * Further analysis
-  * Data export
-  * Result validation
-  * Documentation
-
-### Export Options
-
-#### 1. Image Export
-- **Formats**:
-  * TIFF (default)
-  * Resolution: 72-1200 DPI
-  * Width: 8 inches
-  * Height: 6 inches
-
-- **Settings**:
-  * Compression: LZW
-  * Quality control
-  * Size adjustment
-  * Format validation
-
-#### 2. Data Export
-- **Tables**:
-  * CSV format
-  * Complete data
-  * Headers included
-  * Standardized format
-
-- **Text Files**:
-  * Gene lists
-  * Parameters
-  * Statistics
-  * Annotations
-
-### Best Practices
-
-#### 1. Resolution Selection
-- **Print Quality**: >300 DPI
-- **Screen Display**: 72-150 DPI
-- **Publication**: 600+ DPI
-- **Web Use**: 72-96 DPI
-
-#### 2. Data Interpretation
-- Validate key findings
-- Cross-reference literature
-- Check biological relevance
-- Document parameters
-
-#### 3. Quality Control
-- Verify image quality
-- Check data completeness
-- Validate statistics
-- Confirm cell types
-
-### Troubleshooting
-
-Problem | Cause | Solution
---------|-------|----------
-Low resolution images | DPI too low | Increase DPI setting
-Missing data | Export error | Check file format
-Unclear patterns | Poor contrast | Adjust color scheme
-Export fails | Memory limits | Reduce image size
-Incomplete labels | Space constraints | Adjust plot size
+.. tip::
+   Start with the Ligand Activities view for a high-level overview of results.

@@ -44,6 +44,31 @@ Clustering involves grouping cells that exhibit similar gene expression patterns
 .. warning::  
    Over-clustering can lead to artificial splits within cell types, while under-clustering may overlook biologically distinct populations. Use biological knowledge and marker gene expression to validate clusters.
 
+
+### Data Integration with Harmony
+
+Before proceeding with clustering, you can optionally perform batch effect correction using Harmony. This step is especially useful when working with multiple datasets that may contain technical variations.
+
+1. **Why Use Harmony?**
+   - Removes technical variations while preserving biological differences
+   - Fast and efficient, even for large datasets
+   - Preserves the global structure of your data
+   - Particularly effective for integrating data from different:
+     * Donors
+     * Technologies
+     * Processing batches
+     * Experimental conditions
+
+2. **Running Harmony Integration**:
+   - After PCA completion, click "Run Harmony Integration"
+   - Harmony will iteratively align your datasets
+   - Parameters to consider:
+     * **Variables to integrate**: Select metadata variables that represent batch effects (e.g., "dataset", "technology")
+     * **Number of dimensions**: Usually matches PCA dimensions (default: 15)
+
+.. tip::  
+   Start with integrating by 'dataset' variable first. Add additional variables only if needed, as over-integration might remove biological variation.
+
 ### Interpreting the Results
 
 - **UMAP Plot**:  
@@ -61,3 +86,8 @@ Clustering involves grouping cells that exhibit similar gene expression patterns
    Adjust the resolution parameter or choose a different clustering algorithm. Validate the clusters using known marker genes or biological insights.
 
 By following these steps, you can effectively perform clustering on integrated single-cell RNA sequencing datasets, enabling the identification of distinct cell populations across different conditions or experiments.
+
+References
+----------
+
+1. Korsunsky, I., Millard, N., Fan, J. et al. Fast, sensitive and accurate integration of single-cell data with Harmony. Nat Methods 16, 1289–1296 (2019). https://doi.org/10.1038/s41592-019-0619-0

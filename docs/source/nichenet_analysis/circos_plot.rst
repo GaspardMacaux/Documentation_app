@@ -1,121 +1,81 @@
-===============================
+==========================
 Circos Plot Visualization
-===============================
+==========================
 
-### Overview
-The Circos plot module visualizes complex ligand-target interactions across cell populations using circular diagrams.
+Overview
+--------
+The Circos plot shows interactions between cells and genes in a circular format. It helps visualize which cells are sending signals and which genes are responding.
 
-### Step-by-Step Process
+Creating Your Plot
+----------------
 
-#### 1. Ligand Assignment
-- **Purpose**: Map ligands to sender cells
-- **Method**: Expression-based assignment
-- **Assignment Function**: 
- * Uses mean expression
- * Adds 0.5 standard deviations
- * Ensures cell type specificity
+Step 1: Set Up Cell Connections
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Click "Assign Ligands"
+   * This identifies which cells are producing signals
+   * System automatically finds signaling molecules
+   * Wait for confirmation message
 
-#### 2. Link Definition
-- **Target Type**:
- * User-defined category (e.g. "LCMV-DE") 
- * Indicates target gene set
- * Must match analysis context
+2. Set Up Target Links
+   * Enter target type (e.g., "LCMV-DE")
+   * Set link cutoff (default: 0.4)
+   * Click "Define Links"
+   * Controls which connections to show
 
-- **Link Cutoff (0-1)**:
- * Controls interaction strength filtering 
- * Default: 0.4
- * Higher = stricter filtering
- * Lower = more connections shown
+Step 2: Customize Appearance
+^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Colors
+   * Choose colors for each cell type
+   * Select receptor color
+   * Colors help distinguish different cells
 
-#### 3. Visual Customization
+2. Link Appearance
+   * Link size: Controls connection thickness
+   * Enable transparency if needed
+   * Adjust text size for labels
 
-##### Color Settings
-- **Donor Colors**:
- * Individual colors per sender
- * Automatically generated defaults
- * Custom color selection
- * Helps distinguish populations
+3. Layout Options
+   * Text position: Inside/Outside/Both
+   * Sort mode: Default/Ascending/Descending
+   * Gap between sections: 1-10 degrees
 
-- **Receiver Color**:
- * Single color for targets
- * Default: Grey (#999999)
- * Customizable
- * Contrasts with donors
+Step 3: Generate and Export
+^^^^^^^^^^^^^^^^^^^^^^^^
+1. Click "Generate Circos Plot"
+   * View the plot
+   * Check if adjustments needed
+   * Regenerate if necessary
 
-##### Plot Parameters
-- **Transparency**: 
- * Toggle for link visibility
- * Helps with dense plots
- * Default: OFF
- * Value: 0.3-0.7
+2. Export Options
+   * Set resolution (DPI)
+   * Click "Download Plot"
+   * Save as TIFF file
 
-- **Link Size (0.1-2.0)**:
- * Controls connection width
- * Default: 1.0
- * Affects readability
- * Scale with plot size
+Recommended Settings
+------------------
 
-- **Text Settings**:
- * Size: 0.1-2.0 (Default: 0.6)
- * Position: Inside/Outside/Both
- * Affects label clarity
- * Adjusts automatically
+For Clear Visualization
+^^^^^^^^^^^^^^^^^^^^^
+* Link size: 1.0
+* Text size: 0.6
+* Gap: 1 degree
+* DPI: 300 (minimum for publication)
 
-#### 4. Advanced Options
-- **Top Receptors**: 1-100 (Default: 20)
-- **Sort Mode**: Default/Ascending/Descending
-- **Sector Gap**: 0-10 degrees (Default: 1)
-- **Plot Resolution**: 72-1200 DPI
+For Dense Data
+^^^^^^^^^^^^
+* Enable transparency
+* Reduce number of top receptors
+* Increase gap between sectors
+* Adjust text position to "Outside"
 
-### Plot Generation
+.. tip::
+   Start with default settings and adjust based on your needs. If the plot looks crowded, reduce the number of connections shown.
 
-#### Process Steps
-1. Ligand assignment
-2. Link definition
-3. Color selection
-4. Parameter setting
-5. Plot generation
-6. Export (optional)
+.. note::
+   For publication-quality images, use at least 300 DPI resolution.
 
-#### Export Options
-- Format: TIFF
-- Size: 10x8 inches
-- Resolution: User-defined DPI
-- Compression: LZW
-
-### Parameter Guidelines
-
-Setting | Range | Default | Impact
---------|-------|---------|--------
-Link Cutoff | 0-1 | 0.4 | Interaction filtering
-Text Size | 0.1-2 | 0.6 | Label readability
-Link Size | 0.1-2 | 1.0 | Connection visibility
-Gap Degree | 0-10 | 1 | Sector separation
-
-### Best Practices
-
-#### Color Selection
-- Use contrasting colors
-- Maintain readability
-- Consider colorblind accessibility
-- Match biological relevance
-
-#### Layout Optimization
-- Balance label size
-- Adjust transparency for density
-- Control number of targets
-- Consider plot purpose
-
-### Troubleshooting
-
-Problem | Cause | Solution
---------|-------|----------
-Overlapping text | Too many elements | Reduce targets/increase gap
-Unclear links | Low contrast | Adjust colors/transparency
-Missing labels | Size/position | Modify text parameters
-Poor resolution | Low DPI | Increase export DPI
-
-### References
+References
+------------------
 
 1. Gu, Z. et al. circlize implements and enhances circular visualization in R. Bioinformatics 30, 2811-2812 (2014).
 

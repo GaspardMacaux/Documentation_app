@@ -2,12 +2,12 @@
 Subset
 ===============================
 
-### Overview
+Overview
 Subsetting allows you to create focused datasets by selecting specific cells or genes of interest. This function helps reduce dataset size and focus analysis on relevant biological questions.
 
-### Subsetting Methods
+Subsetting Methods
 
-#### 1. Cluster-Based Subsetting
+1. Cluster-Based Subsetting
 - **Selection Options**:
  * Choose specific clusters
  * Multiple cluster selection
@@ -22,7 +22,7 @@ Subsetting allows you to create focused datasets by selecting specific cells or 
   :width: 90%
   :align: center
 
-#### 2. Gene Expression Subsetting
+2. Gene Expression Subsetting
 - **Gene Selection**:
  * Enter gene list (comma-separated)
  * Set expression threshold
@@ -33,47 +33,16 @@ Subsetting allows you to create focused datasets by selecting specific cells or 
  * Number of genes required
  * Include/exclude options
 
-### Visualization Options
+Visualization Options
 
-#### Before Subsetting
+Before Subsetting
 - **Global UMAP**:
  * Shows complete dataset
  * Highlights selected clusters
  * Original structure visible
 
-#### After Subsetting
+After Subsetting
 - **Subset UMAP**:
  * Displays selected cells only
  * Maintains original coordinates
  * Confirms selection accuracy
-
-### Data Export
-
-#### Save Options
-- **Format**: .RDS file
-- **Content**: Complete Seurat object
-- **Includes**:
- * Expression data
- * Metadata
- * Dimensional reductions
-
-.. tip::
-  * Document subsetting criteria
-  * Verify cell numbers
-  * Check gene lists carefully
-  * Save original dataset
-
-.. warning::
-  * Check gene spelling
-  * Verify threshold values
-  * Monitor cell numbers
-  * Backup before subsetting
-
-### Troubleshooting
-
-Problem | Cause | Solution
---------|-------|----------
-Empty subset | Wrong criteria | Check thresholds
-Missing cells | Strict filters | Adjust parameters
-Gene not found | Spelling errors | Verify gene names
-Large file size | Many features | Consider further filtering

@@ -2,10 +2,10 @@
 Clustering
 ==========================
 
-### Overview
+Overview
 Clustering is a key step in single-cell RNA sequencing analysis that groups cells with similar gene expression profiles into clusters. These clusters may correspond to different cell types, states, or other biological distinctions. In this application, clustering is performed in two main steps: **finding neighbors** and **running the clustering algorithm**. Additionally, **UMAP** is used to visualize the clusters.
 
-### Neighbors Calculation
+Neighbors Calculation
 The first step in clustering is calculating the **nearest neighbors** for each cell based on their gene expression similarities.
 
 - **Number of Dimensions Parameter**: 
@@ -20,7 +20,7 @@ The first step in clustering is calculating the **nearest neighbors** for each c
   * Required for UMAP visualization
   * Creates network of cell relationships
 
-### Running the Clustering
+Running the Clustering
 After neighbor calculation, cells are grouped into clusters based on their similarities.
 
 - **Resolution Parameter (0.1-2.0)**:
@@ -50,7 +50,7 @@ After neighbor calculation, cells are grouped into clusters based on their simil
    :width: 90%
    :align: center
 
-### UMAP Visualization
+UMAP Visualization
 UMAP provides a 2D representation of the clustering results.
 
 - **Visualization Options**:
@@ -79,7 +79,7 @@ UMAP provides a 2D representation of the clustering results.
    * Check biological markers to validate clusters
    * Document parameters for reproducibility
 
-### Troubleshooting Guide
+Troubleshooting Guide
 
 Problem | Possible Cause | Solution
 --------|---------------|----------

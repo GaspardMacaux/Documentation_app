@@ -2,12 +2,12 @@
 DoubletFinder
 ===============================
 
-### Overview
+Overview
 DoubletFinder is a tool used to identify and remove cell doublets from single-cell RNA sequencing data. Doublets occur when two cells are captured and sequenced together, potentially confounding downstream analysis.
 
-### Parameters and Settings
+Parameters and Settings
 
-#### pK Identification
+pK Identification
 - **Purpose**: Determines optimal pK value
 - **Process**: 
  * Tests multiple pK values
@@ -15,19 +15,19 @@ DoubletFinder is a tool used to identify and remove cell doublets from single-ce
  * Identifies optimal parameter
  * pK range typically: 0.01-0.3
 
-#### nExp Parameter
+nExp Parameter
 - **Definition**: Expected number of doublets
 - **Calculation**:
  * Based on cell loading density
  * 10X standard: ~0.8% per 1000 cells
  * Example: 10,000 cells ≈ 80 doublets
 
-#### pN Parameter
+pN Parameter
 - **Purpose**: Sets proportion of artificial doublets
 - **Default**: 0.25
 - **Range**: Usually 0.15-0.3
 
-### Running DoubletFinder
+Running DoubletFinder
 
 1. **Parameter Optimization**
   - Click "Find optimal pK"
@@ -56,30 +56,22 @@ DoubletFinder is a tool used to identify and remove cell doublets from single-ce
   * Don't overfilter rare populations
   * Validate removed cells
 
-### QC Metrics
+QC Metrics
 
-#### Key Outputs
+Key Outputs
 - Doublet scores
 - Doublet classifications
 - Visualization plots
 - Summary statistics
 
-#### Validation Approaches
+Validation Approaches
 - Check known doublet markers
 - Review cell numbers
 - Examine cluster distributions
 - Verify rare populations
 
-### Troubleshooting
-
-Problem | Cause | Solution
---------|-------|----------
-Too many doublets | High pK | Lower pK value
-Missing doublets | Low nExp | Adjust expected rate
-Unclear separation | Poor parameters | Optimize pK
-Lost rare cells | Aggressive filtering | Review thresholds
-
-### References
+References
+----------
 
 1. McGinnis, C.S., Murrow, L.M. & Gartner, Z.J. DoubletFinder: Doublet Detection in Single-Cell RNA Sequencing Data Using Artificial Nearest Neighbors. Cell Syst 8, 329-337.e4 (2019).
 

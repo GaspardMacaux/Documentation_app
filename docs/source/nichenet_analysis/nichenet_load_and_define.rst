@@ -77,7 +77,7 @@ References
 
 1. Browaeys, R., Saelens, W. & Saeys, Y. NicheNet: modeling intercellular communication by linking ligands to target genes. Nat Methods 17, 159–162 (2020). https://doi.org/10.1038/s41592-019-0667-5
 
-2. Bhttps://github.com/saeyslab/nichenetr
+2. https://github.com/saeyslab/nichenetr
 
 3. Network Resources:
    - Human/Mouse Networks: https://doi.org/10.5281/zenodo.7074291

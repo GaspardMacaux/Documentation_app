@@ -1,170 +1,72 @@
-===============================
+==========================
 MultiNicheNet Analysis
-===============================
+==========================
 
-### Overview
+Overview
+--------
+MultiNicheNet extends NicheNet to analyze cell-cell communication across multiple experimental conditions, enabling comparison of intercellular signaling between different states or treatments.
 
-MultiNicheNet is a powerful extension of NicheNet that allows analysis of cell-cell communication across multiple conditions. Unlike NicheNet which compares two conditions, MultiNicheNet can analyze complex experimental designs with multiple groups, time points, or treatments.
+Required Files
+-------------
 
-### Detailed Step-by-Step Guide
+Before starting your analysis, prepare these files:
 
-#### Step 1: Data Preparation and Loading
+1. **Your Data**
+   * Seurat object (.rds) or SingleCellExperiment object (.rds)
+   * Must include:
+     - Gene expression matrix
+     - Cell type annotations
+     - Sample/condition labels
+     - Quality control metrics
 
-1. **Required Files**
-
-   A. **Expression Data**:
-      - Format: Seurat or SingleCellExperiment object (.rds)
-      - Must contain:
-         * Gene expression matrix
-         * Cell type annotations
-         * Sample/condition information
-         * Quality control metrics
-
-   B. **Network Files**:
-      - Ligand-receptor networks:
-         * Human: zenodo.org/10229222
-         * Mouse: zenodo.org/10229222
-      - Ligand-target matrices:
-         * Human: zenodo.org/7074291
-         * Mouse: zenodo.org/7074291
-
-2. **Loading Process**
-
-   A. **Open Data Loading Menu**:
-      - Click "Open Data Loading Menu"
-      - System will display file selection interface
-
-   B. **File Selection**:
-      - Choose your expression data (.rds)
-      - Select appropriate network files
-      - Verify file formats match species
-
-   C. **Validation**:
-      - System checks file integrity
-      - Verifies data structure
-      - Confirms metadata presence
-      - Reports any issues found
-
-#### Step 2: Metadata Parameter Definition
-
-1. **Sample ID Selection**
+2. **Network Files** 
    
-   A. **Purpose**:
-      - Uniquely identifies each sample
-      - Links cells to experimental conditions
-      - Essential for batch effect control
+   A. **Ligand-Receptor Network**
+      * For Human: `Download Human Network <https://zenodo.org/record/10229222/files/lr_network_human_allInfo_30112033.rds>`_
+      * For Mouse: `Download Mouse Network <https://zenodo.org/record/10229222/files/lr_network_mouse_allInfo_30112033.rds>`_
+   
+   B. **Ligand-Target Matrix**
+      * For Human: `Download Human Matrix <https://zenodo.org/record/7074291/files/ligand_target_matrix_nsga2r_final.rds>`_
+      * For Mouse: `Download Mouse Matrix <https://zenodo.org/record/7074291/files/ligand_target_matrix_nsga2r_final_mouse.rds>`_
 
-   B. **How to Select**:
-      - From dropdown menu, choose column containing sample identifiers
-      - Verify each sample has unique ID
-      - Ensure IDs match your experimental design
+Step-by-Step Analysis
+--------------------
 
-   C. **Common Issues**:
-      - Missing sample information
-      - Duplicate IDs
-      - Inconsistent naming
+1. **Load Your Data**
+   * Click "Open Data Loading Menu"
+   * Load your Seurat/SingleCellExperiment object
+   * Load network files you downloaded
+   * Wait for confirmation message
 
-2. **Group ID Configuration**
+2. **Define Metadata Parameters**
+   
+   A. **Sample ID**
+      * Select column containing sample identifiers
+      * Each sample must have unique ID
+      * Used to track individual samples
+   
+   B. **Group ID**
+      * Select column with experimental conditions
+      * Examples: "treatment", "timepoint", "disease_state"
+      * Used for comparisons
+   
+   C. **Cell Type ID**
+      * Select column with cell type labels
+      * Must be consistent across samples
+      * Used for cell type analysis
 
-   A. **Purpose**:
-      - Defines experimental conditions
-      - Groups samples by treatment/state
-      - Enables statistical comparisons
+3. **Set Up Contrasts**
+   * Select groups to compare
+   * System generates contrast formula
+   * Validates comparison setup
+   * Shows formula preview
 
-   B. **Selection Process**:
-      - Choose column containing group information
-      - Verify all samples have group assignments
-      - Check group names match your design
-
-   C. **Examples**:
-      - Treatment vs Control
-      - Time points (Day1, Day2, etc.)
-      - Disease states
-      - Genetic conditions
-
-3. **Cell Type ID Selection**
-
-   A. **Purpose**:
-      - Identifies cell populations
-      - Enables population-specific analysis
-      - Required for sender/receiver definition
-
-   B. **How to Choose**:
-      - Select column with cell type annotations
-      - Verify annotations are consistent
-      - Check population sizes
-
-   C. **Requirements**:
-      - Clear cell type labels
-      - Sufficient cells per type
-      - Biological relevance
-
-#### Step 3: Contrast Definition
-
-1. **Understanding Contrasts**
-
-   A. **Purpose**:
-      - Defines comparisons of interest
-      - Structures statistical analysis
-      - Guides result interpretation
-
-   B. **Types of Contrasts**:
-      - Simple (A vs B)
-      - Multiple (A vs B vs C)
-      - Complex (A vs [B+C]/2)
-      - Time series
-
-2. **Setting Up Contrasts**
-
-   A. **Group Selection**:
-      - Choose groups to compare
-      - Order determines contrast direction
-      - Multiple selections possible
-
-   B. **Formula Generation**:
-      - System creates contrast formula
-      - Displays in mathematical notation
-      - Shows comparison structure
-
-   C. **Validation**:
-      - Check formula accuracy
-      - Verify group selection
-      - Confirm comparison logic
-
-### Important Considerations
-
-#### 1. Data Quality
-- Minimum cells per group: >100 recommended
-- Even group sizes preferred
-- Clean annotations required
-- Quality control metrics checked
-
-#### 2. Experimental Design
-- Balanced design preferred
-- Sufficient replication
-- Clear control groups
-- Logical comparisons
-
-#### 3. Technical Requirements
-- Memory: 16GB minimum
-- Storage: 10GB free space
-- Processing: Multi-core recommended
-
-### Troubleshooting Common Issues
-
-Problem | Cause | Solution | Prevention
---------|-------|----------|------------
-Missing groups | Incorrect column | Check metadata | Verify before analysis
-Error in contrast | Invalid formula | Revise selection | Test simple contrasts first
-Memory error | Large dataset | Reduce scope | Check requirements
-Failed loading | Format issue | Check file type | Use provided templates
-
-### Next Steps
-After completing these steps:
-1. Run analysis
-2. Review results
-3. Generate visualizations
-4. Export findings
+Important Considerations
+----------------------
+* Minimum 100 cells per group recommended
+* Clean, consistent annotations required
+* 16GB RAM minimum recommended
+* Multi-core processing supported
 
 ### References
 

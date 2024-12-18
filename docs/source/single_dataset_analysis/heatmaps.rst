@@ -5,9 +5,9 @@ Heat Maps & Dual Expression
 ### Overview
 Heat maps and dual expression analyses are powerful tools for visualizing gene expression patterns across your dataset. Heat maps show expression levels of multiple genes across clusters, while dual expression analysis reveals relationships between pairs of genes.
 
-### Heat Map Analysis
+Heat Map Analysis
 
-#### Features and Options
+Features and Options
 - **Gene Selection**:
   * Choose specific genes of interest
   * Select multiple genes simultaneously
@@ -23,7 +23,7 @@ Heat maps and dual expression analyses are powerful tools for visualizing gene e
   * Set resolution for export
   * Modify plot dimensions
 
-#### Interpretation Guide
+Interpretation Guide
 - **Color Intensity**:
   * Darker = Higher expression
   * Lighter = Lower expression
@@ -34,9 +34,9 @@ Heat maps and dual expression analyses are powerful tools for visualizing gene e
   * Columns = Clusters/Cells
   * Dendrograms show relationships
 
-### Dual Expression Analysis
+Dual Expression Analysis
 
-#### Setup and Options
+Setup and Options
 - **Gene Selection**:
   * Pick first target gene
   * Select second gene for comparison
@@ -47,7 +47,7 @@ Heat maps and dual expression analyses are powerful tools for visualizing gene e
   * Color scheme selection
   * Resolution settings
 
-#### Analysis Features
+Analysis Features
 - **Co-expression Patterns**:
   * X-axis = First gene
   * Y-axis = Second gene
@@ -70,7 +70,7 @@ Heat maps and dual expression analyses are powerful tools for visualizing gene e
    * Consider expression ranges
    * Validate unexpected patterns
 
-### Troubleshooting Guide
+Troubleshooting Guide
 
 Problem | Cause | Solution
 --------|-------|----------

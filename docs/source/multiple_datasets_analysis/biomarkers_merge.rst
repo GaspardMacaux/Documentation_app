@@ -4,7 +4,7 @@ Cluster Biomarkers
 
 Identifying cluster-specific biomarkers is essential for distinguishing between different cell types or states within integrated datasets. Biomarkers are genes that are uniquely or highly expressed in a particular cluster, serving as molecular signatures for those clusters.
 
-### Understanding Biomarkers
+Understanding Biomarkers
 
 Biomarkers are characteristic genes whose expression levels are indicative of specific biological states or cell types. In the context of clustering, biomarkers help:
 
@@ -12,7 +12,7 @@ Biomarkers are characteristic genes whose expression levels are indicative of sp
 - Understand the functional properties of different cell populations.
 - Identify potential targets for therapeutic intervention or further study.
 
-### How to Identify and Use Cluster Biomarkers
+How to Identify and Use Cluster Biomarkers
 
 1. **Biomarker Discovery**:  
    Use differential expression analysis to find genes that are significantly upregulated in a cluster compared to others. This can be done through the interface by selecting clusters and applying the analysis tools.
@@ -29,7 +29,7 @@ Biomarkers are characteristic genes whose expression levels are indicative of sp
    :width: 90%
    :align: center
 
-### Interface Usage
+Interface Usage
 
 1. **UMAP Plot Filtering**:  
    - Visualize the clusters in the UMAP plot and filter based on specific datasets or parameters.

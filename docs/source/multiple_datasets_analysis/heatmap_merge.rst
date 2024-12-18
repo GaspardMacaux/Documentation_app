@@ -1,25 +1,73 @@
-==========================
-Heatmaps
-==========================
+=====================================
+HEATMAPS AND DUAL EXPRESSION ANALYSIS
+=====================================
 
-Heatmaps are powerful visualization tools that display the expression levels of selected genes across different clusters or conditions. They are particularly useful for identifying patterns of gene expression that are consistent or variable across multiple datasets.
+OVERVIEW
+This section provides two powerful visualization tools for analyzing gene expression patterns across your datasets:
+1. Heatmaps: Visualize expression patterns of multiple genes simultaneously
+2. Dual Expression Analysis: Compare expression levels between pairs of genes
 
-**Understanding Heatmaps:**
+HEATMAP VISUALIZATION
 
-Heatmaps provide a matrix-like visualization where each row represents a gene, and each column represents a cluster or sample. The color intensity represents the level of gene expression, allowing for quick identification of expression patterns.
+What is a Heatmap?
+- Matrix-like visualization where rows represent genes and columns represent clusters/datasets
+- Color intensity indicates expression level
+- Helps identify patterns across multiple genes simultaneously
 
-**How to Create and Interpret Heatmaps:**
+Creating Your Heatmap
 
-1. **Gene Selection:** Choose genes that are relevant to your analysis or are known markers for specific cell types.
-2. **Cluster Selection:** Select clusters or conditions to include in the heatmap. You can focus on specific clusters or include all clusters to compare across the entire dataset.
-3. **Customization:** Adjust heatmap settings such as color gradients, clustering methods, and ordering of rows and columns to enhance interpretability.
-4. **Interpretation:** Use heatmaps to identify clusters with similar expression patterns, distinguish cell types, and explore gene co-expression.
+Step 1: Gene Selection
+- Use the "Select Genes" dropdown menu to choose genes
+- Options:
+  * Manual selection: Pick specific genes of interest
+  * Automatic selection: Check "Use top 10 genes per cluster"
+  * Search functionality available for finding specific genes
 
-.. tip::
-   Use hierarchical clustering options within the heatmap to group similar genes or clusters together, making patterns easier to identify.
+Step 2: Group Selection
+- Choose how to group your data:
+  * By dataset: Compare between different samples/conditions
+  * By cluster: Compare between cell types
+- Specify clusters:
+  * Enter specific clusters in comma-separated format
+  * Or select "Select All Clusters" for complete analysis
 
-.. warning::
-   Be cautious when selecting too many genes or clusters, as this can result in dense heatmaps that are difficult to interpret. Focus on a subset of the most informative genes.
+Step 3: Generate and Customize
+- Click "Generate Heatmap" to create visualization
+- Adjust resolution for download (default: 300 DPI)
+- Download the heatmap for presentations or publication
 
+Tips for Heatmap Analysis:
+- Start with a small set of known marker genes
+- Add genes gradually to maintain clarity
+- Consider using cluster-specific top genes
+- Group similar clusters together for better pattern visualization
 
+DUAL EXPRESSION ANALYSIS
+
+What is Dual Expression?
+- Scatter plot comparing expression levels of two genes
+- Each point represents a cell
+- Reveals relationships between gene pairs
+- Helps identify co-expression patterns
+
+Creating Dual Expression Plots
+
+Step 1: Gene Selection
+- Choose two genes to compare:
+  * First gene selector: Primary gene of interest
+  * Second gene selector: Gene to compare against
+- Use search functionality to find specific genes
+
+Step 2: Configure Display
+- Select grouping method:
+  * Dataset: Color points by sample origin
+  * Cluster: Color points by cell type
+- Choose clusters to include:
+  * Enter specific clusters or
+  * Select all clusters for complete comparison
+
+Step 3: Generate and Export
+- Click "Generate Dual Expression" to create plot
+- Adjust resolution as needed
+- Download for further use
 

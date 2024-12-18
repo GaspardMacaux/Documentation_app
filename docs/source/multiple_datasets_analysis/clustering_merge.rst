@@ -2,90 +2,106 @@
 Clustering Multiple Datasets
 ==========================
 
-### Overview
+OVERVIEW
+After loading and integrating your datasets, the clustering step helps identify distinct cell populations based on gene expression patterns. This process involves several key steps: data scaling, dimensional reduction, optional batch effect correction with Harmony, and finally, cell clustering.
 
-Clustering is a critical step in single-cell RNA sequencing analysis that helps identify distinct cell populations based on gene expression profiles. In the context of multiple datasets, clustering allows for the discovery of shared and unique cell types across different conditions or experiments.
+STEP-BY-STEP PROCESS
 
-### Understanding Clustering
+1. SCALING AND DIMENSIONAL REDUCTION
+First, click "Run Scaling, PCA and Elbow Plot". This performs three essential operations:
+- Scales your data to make genes comparable
+- Calculates Principal Component Analysis (PCA)
+- Generates an Elbow Plot to help determine optimal dimensions
 
-Clustering involves grouping cells that exhibit similar gene expression patterns. This process is essential for:
+2. OPTIONAL: HARMONY INTEGRATION
+If your datasets show batch effects, you can use Harmony integration:
+- Click "Run Harmony Integration"
+- In Harmony Settings:
+  * Select variables to integrate (like "dataset" or "condition")
+  * Set number of dimensions (default: 15)
 
-- Identifying different cell types or states within a dataset.
-- Understanding the heterogeneity of cell populations.
-- Revealing insights into biological processes and cellular responses.
+3. CLUSTERING SETUP
+After dimensional reduction, configure clustering parameters:
 
-### How Clustering Works in an Integrated Dataset
+Number of Dimensions
+- Default value: 15
+- Range: 1 to maximum PCs available
+- How to choose: Look at the Elbow Plot where variance explained plateaus
+- Impact: Higher values include more information but increase noise
 
-1. **Dimensional Reduction**:  
-   Before clustering, the integrated dataset undergoes dimensionality reduction using techniques like PCA (Principal Component Analysis) or UMAP (Uniform Manifold Approximation and Projection). This step reduces the complexity of the data while retaining its most informative features.
-   
-   - **Run Scaling, PCA, and Elbow Plot**:  
-     Click "Run Scaling, PCA, and Elbow Plot" to perform scaling and PCA on the integrated dataset. This step identifies the most variable features and reduces the data to its principal components.
-     - The **Elbow Plot** will be generated to help determine the optimal number of principal components to use for downstream analysis.
+Resolution for Clustering
+- Default value: 0.5
+- Range: 0.01 to 2.0
+- How to adjust:
+  * Lower values (0.1-0.3): Fewer, broader clusters
+  * Medium values (0.4-0.8): Balanced clustering
+  * Higher values (>0.8): More detailed, smaller clusters
+- Impact: Determines how finely the cells are grouped
 
-2. **Find Neighbors and Run UMAP**:  
-   - After determining the number of dimensions to use from PCA, input this number in the "Number of dimensions" field.
-   - Click "Find Neighbors and run UMAP" to perform neighborhood graph construction and UMAP dimensional reduction.
-   - This step prepares the data for clustering by defining the local neighborhood structure of the cells.
+Clustering Algorithm Options
+1. Original Louvain
+   - Best for: General purpose clustering
+   - Characteristics: Fast, reliable
+   - Good starting point for most analyses
 
-3. **Graph-Based Clustering**:  
-   After dimensional reduction, a graph-based clustering algorithm (such as Louvain or SLM) is applied.
-   - **Select Algorithm**: Choose the clustering algorithm to use (e.g., Original Louvain, Louvain with Multilevel Refinement, or SLM Algorithm).
-   - **Set Resolution**: The resolution parameter controls the granularity of the clustering. A higher resolution will result in more clusters, potentially identifying more subtle subpopulations.
-   - Click "Find clusters" to apply the clustering algorithm and partition the cells into clusters.
+2. Louvain with Multilevel Refinement
+   - Best for: Large datasets
+   - Characteristics: More thorough, slower
+   - Can find more subtle clusters
 
-.. image:: ../_static/images/multiple_datasets_analysis/clustering_merge.png
-   :width: 90%
-   :align: center
+3. SLM Algorithm
+   - Best for: Very large datasets
+   - Characteristics: Fastest option
+   - May miss some subtle clusters
 
-.. tip::  
-   Adjust the resolution parameter to find the optimal number of clusters for your analysis. Start with a moderate value and adjust based on the clustering results and biological relevance.
+VISUALIZATION OPTIONS
 
-.. warning::  
-   Over-clustering can lead to artificial splits within cell types, while under-clustering may overlook biologically distinct populations. Use biological knowledge and marker gene expression to validate clusters.
+UMAP Plot Customization
+- Remove Axes: Hides axis lines and labels
+- Remove Legend: Hides cluster labels
+- DPI for UMAP Download: Adjust image resolution
+  * 300 DPI: Standard quality
+  * 600 DPI: High quality
+  * 1200 DPI: Publication quality
 
+WORKFLOW ORDER
 
-### Data Integration with Harmony
+1. Initial Analysis
+   a) Run Scaling, PCA and view Elbow Plot
+   b) Decide if Harmony integration is needed
+   c) Run Harmony if required
 
-Before proceeding with clustering, you can optionally perform batch effect correction using Harmony. This step is especially useful when working with multiple datasets that may contain technical variations.
+2. Clustering
+   a) Set dimensions based on Elbow Plot
+   b) Start with default resolution (0.5)
+   c) Choose Original Louvain algorithm
+   d) Click "Find Neighbors and run UMAP"
+   e) Click "Find clusters"
 
-1. **Why Use Harmony?**
-   - Removes technical variations while preserving biological differences
-   - Fast and efficient, even for large datasets
-   - Preserves the global structure of your data
-   - Particularly effective for integrating data from different:
-     * Donors
-     * Technologies
-     * Processing batches
-     * Experimental conditions
+3. Optimization
+   - If clusters look too broad: Increase resolution
+   - If clusters look too fragmented: Decrease resolution
+   - If clustering is slow: Try SLM algorithm
+   - If subtle populations are important: Try Louvain with Multilevel Refinement
 
-2. **Running Harmony Integration**:
-   - After PCA completion, click "Run Harmony Integration"
-   - Harmony will iteratively align your datasets
-   - Parameters to consider:
-     * **Variables to integrate**: Select metadata variables that represent batch effects (e.g., "dataset", "technology")
-     * **Number of dimensions**: Usually matches PCA dimensions (default: 15)
+PARAMETER ADJUSTMENT TIPS
 
-.. tip::  
-   Start with integrating by 'dataset' variable first. Add additional variables only if needed, as over-integration might remove biological variation.
+1. Resolution Adjustment
+   - Start at 0.5
+   - Increase in 0.1 increments if you need more clusters
+   - Decrease if you see too many clusters
+   - Consider your biological expectations
 
-### Interpreting the Results
+2. Dimension Selection
+   - Look for the "elbow" in the Elbow Plot
+   - Usually between 10-30 dimensions
+   - Too few: Miss important variation
+   - Too many: Include noise
 
-- **UMAP Plot**:  
-   After clustering, each cell is assigned to a cluster. These clusters can be visualized using the UMAP plot.
-   - The clusters are color-coded, allowing for easy identification of distinct cell populations.
-   - Use the checkboxes to remove axes or the legend for a cleaner visualization.
-   - The UMAP plot can be downloaded by clicking "Download UMAP" and adjusting the DPI as needed.
-
-### Troubleshooting
-
-- **Error During Scaling or PCA**:  
-   Ensure that the integrated dataset is correctly loaded and that the data contains sufficient variability for PCA.
-
-- **Clustering Results Do Not Match Expectations**:  
-   Adjust the resolution parameter or choose a different clustering algorithm. Validate the clusters using known marker genes or biological insights.
-
-By following these steps, you can effectively perform clustering on integrated single-cell RNA sequencing datasets, enabling the identification of distinct cell populations across different conditions or experiments.
+3. Algorithm Choice
+   - Start with Original Louvain
+   - Switch to SLM if speed is an issue
+   - Use Multilevel Refinement for detailed analysis
 
 References
 ----------

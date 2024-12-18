@@ -4,7 +4,7 @@ Subset
 
 Subsetting your data allows you to focus on specific cell populations or conditions for a more targeted analysis. This approach is beneficial when dealing with large datasets or when interested in a particular subset of cells.
 
-### Concept of Subsetting
+Concept of Subsetting
 
 Subsetting involves selecting a specific portion of the data based on certain criteria, such as cluster identities or gene expression levels. This process is useful for:
 
@@ -12,7 +12,7 @@ Subsetting involves selecting a specific portion of the data based on certain cr
 - Reducing data complexity to enhance the clarity of subsequent analyses.
 - Conducting targeted analyses on specific cell populations or conditions.
 
-### How to Create and Use Subsets
+How to Create and Use Subsets
 
 1. **Cluster-Based Subsetting**:  
    - Select clusters of interest based on their biological relevance or experimental focus.
@@ -33,7 +33,7 @@ Subsetting involves selecting a specific portion of the data based on certain cr
    :width: 90%
    :align: center
 
-### Interface Usage
+Interface Usage
 
 1. **UMAP Plot**:  
    - The interface provides a UMAP plot of the entire dataset for an overview of the cell populations. This helps in identifying clusters for subsetting.
@@ -50,14 +50,3 @@ Subsetting involves selecting a specific portion of the data based on certain cr
 4. **Downloading Subsets**:  
    - After creating a subset, you can download it as an `.rds` file by clicking "Save subset as .RDS".
    - This allows you to save and reuse subsets for further analysis or sharing.
-
-.. tip::  
-   Subsetting is useful for focusing on specific biological questions. Always verify the subset contains sufficient data for meaningful analysis.
-
-### Applications
-
-- **Targeted Analysis**:  
-  Conduct in-depth analyses on specific cell types or states within a dataset.
-  
-- **Data Reduction**:  
-  Simplify datasets by focusing on a subset of interest, making downstream analyses more manageable and interpretable.

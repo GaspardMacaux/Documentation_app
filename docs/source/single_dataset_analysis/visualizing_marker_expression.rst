@@ -2,12 +2,12 @@
 Visualizing Marker Expression
 ===================================
 
-### Overview
+Overview
 Visualizing marker gene expression is essential for understanding the biological significance of different cell clusters and their heterogeneity. The application provides multiple visualization options to explore gene expression data effectively.
 
-### Available Plot Types
+Available Plot Types
 
-#### 1. Feature Plot
+1. Feature Plot
 - **Purpose**: Spatial visualization of gene expression
 - **Features**:
   * Expression levels shown on UMAP
@@ -19,7 +19,7 @@ Visualizing marker gene expression is essential for understanding the biological
   * Show co-expression
   * Color scheme selection
 
-#### 2. Violin Plot
+2. Violin Plot
 - **Purpose**: Distribution of expression within clusters
 - **Features**:
   * Shows expression spread per cluster
@@ -30,7 +30,7 @@ Visualizing marker gene expression is essential for understanding the biological
   * Remove axes/legend
   * Adjust point size
 
-#### 3. Dot Plot
+3. Dot Plot
 - **Purpose**: Summary of expression patterns
 - **Features**:
   * Dot size = percentage expressing
@@ -41,7 +41,7 @@ Visualizing marker gene expression is essential for understanding the biological
   * Axis rotation
   * Remove axes/legend
 
-#### 4. Ridge Plot
+4. Ridge Plot
 - **Purpose**: Distribution comparison across clusters
 - **Features**:
   * Layered density plots
@@ -51,7 +51,7 @@ Visualizing marker gene expression is essential for understanding the biological
   * Remove axes/legend
   * Adjust plot parameters
 
-### How to Visualize Marker Expression
+How to Visualize Marker Expression
 
 1. **Select Genes**:  
    Use the dropdown menu to select one or more genes to visualize. You can select multiple genes for comparative visualization in some plot types.
@@ -85,12 +85,3 @@ Visualizing marker gene expression is essential for understanding the biological
    * Consider cluster sizes
    * Watch for outliers
    * Validate patterns
-
-### Common Issues and Solutions
-
-Problem | Cause | Solution
---------|-------|----------
-No expression visible | Wrong cutoffs | Adjust min/max values
-Overlapping points | Too many cells | Reduce point size
-Unclear patterns | Poor scaling | Try different cutoffs
-Missing clusters | Wrong grouping | Check cluster selection

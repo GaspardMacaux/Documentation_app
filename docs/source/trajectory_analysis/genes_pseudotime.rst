@@ -4,11 +4,11 @@ Genes Pseudotime
 
 The "Genes Pseudotime" tab focuses on identifying differentially expressed genes along the inferred trajectory, allowing for the exploration of gene dynamics over pseudo-time. This analysis can reveal genes that play crucial roles at different stages of a biological process.
 
-### Understanding Genes Pseudotime Analysis
+Understanding Genes Pseudotime Analysis
 
 Genes Pseudotime Analysis is used to identify and visualize genes whose expression levels change along the trajectory. These changes provide insights into the molecular mechanisms driving the biological process represented by the trajectory.
 
-### Key Steps in Genes Pseudotime Analysis
+Key Steps in Genes Pseudotime Analysis
 
 1. **Differential Expression Analysis Along Trajectory:**
    - After ordering cells in pseudotime, differential expression analysis is performed to identify genes that vary significantly along the trajectory.
@@ -36,15 +36,10 @@ Genes Pseudotime Analysis is used to identify and visualize genes whose expressi
 .. warning::
    Ensure that the trajectory and pseudotime ordering are biologically meaningful before interpreting gene expression changes.
 
-### How to Analyze Genes in Pseudotime
+How to Analyze Genes in Pseudotime
 
 1. **Calculate Differential Genes:** Click the "Run Differential Gene Test" button to compute differentially expressed genes along the trajectory.
 2. **Visualize Gene Trajectory:** Select genes from the picker and click "Visualize Gene Trajectory" to see how their expression changes along the pseudotime.
 3. **Gene Module Analysis (Optional):** Perform module analysis to identify gene modules and visualize their dynamics.
 4. **Genes Along Path:** Choose genes and cell types to visualize gene dynamics along a specific path in the trajectory.
 
-### Applications of Genes Pseudotime Analysis
-
-- **Identify Key Drivers:** Discover key genes involved in cell differentiation or disease progression.
-- **Understand Gene Function:** Explore how gene function changes across different stages of a biological process.
-- **Pathway Analysis:** Identify pathways active at different points along the trajectory, providing insights into the underlying biology.

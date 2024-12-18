@@ -2,12 +2,12 @@
 Differentially Expressed Genes (DEGs)
 ===========================================
 
-### Overview
+Overview
 Identifying **Differentially Expressed Genes (DEGs)** is essential for understanding the biological differences between cell clusters or experimental conditions. DEGs are genes that show statistically significant differences in expression between groups of cells.
 
-### Parameters and Their Impact
+Parameters and Their Impact
 
-#### 1. Log Fold Change (logFC)
+1. Log Fold Change (logFC)
 - **Definition**: Measures expression difference between groups on logarithmic scale
 - **Interpretation**:
   * logFC of 1 = gene expressed 2x more
@@ -18,7 +18,7 @@ Identifying **Differentially Expressed Genes (DEGs)** is essential for understan
   * Standard: > 0.25
   * Permissive: > 0.1
 
-#### 2. Percentage Threshold
+2. Percentage Threshold
 - **Purpose**: Controls minimum cell expression requirement
 - **Settings**:
   * Strict (25%): More confident results
@@ -26,7 +26,7 @@ Identifying **Differentially Expressed Genes (DEGs)** is essential for understan
   * Permissive (1%): Captures rare expression
 - **Impact**: Higher values reduce false positives
 
-### Running the Analysis
+Running the Analysis
 
 1. **Set Parameters**
    - Adjust logFC threshold
@@ -42,9 +42,9 @@ Identifying **Differentially Expressed Genes (DEGs)** is essential for understan
    :width: 90%
    :align: center
 
-### Results Interpretation
+Results Interpretation
 
-#### DEG Table Columns
+DEG Table Columns
 - **Gene**: Gene identifier
 - **Average Expression**: Mean expression level
 - **Percentage Cells**: Fraction of cells expressing gene
@@ -52,32 +52,17 @@ Identifying **Differentially Expressed Genes (DEGs)** is essential for understan
 - **P-value**: Statistical significance
 - **Adjusted P-value**: Corrected for multiple testing
 
-#### Interactive Features
+Interactive Features
 - Click gene names for Protein Atlas links
 - Sort columns to prioritize genes
 - Filter results as needed
 
-### Data Export Options
+Data Export Options
 - **Download DEGs**: CSV format with all statistics
 - **Save Seurat Object**: Complete analysis state
-
-.. tip::
-   * Start with standard thresholds (logFC > 0.25, 10% cells)
-   * Adjust based on biological expectations
-   * Consider both statistical and biological significance
-   * Validate key findings with visualizations
 
 .. warning::
    * Low thresholds = more false positives
    * High thresholds might miss subtle changes
    * Always validate important genes
    * Consider biological context
-
-### Troubleshooting
-
-Problem | Cause | Solution
---------|--------|----------
-No DEGs found | Thresholds too strict | Lower logFC threshold
-Too many DEGs | Thresholds too permissive | Increase logFC threshold
-Missing expected genes | Percentage threshold too high | Lower percentage requirement
-High p-values | Low cell numbers | Check cluster sizes

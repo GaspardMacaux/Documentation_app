@@ -2,18 +2,18 @@
 Assigning Cell Type Identity
 ====================================
 
-### Overview
+Overview
 This section enables manual assignment of cell type identities to clusters based on marker gene expression and clustering patterns. Proper cell type annotation is crucial for biological interpretation.
 
-### Cell Type Assignment Interface
+Cell Type Assignment Interface
 
-#### Cluster Selection
+Cluster Selection
 - **Select Cluster**: 
  * Choose target cluster from dropdown
  * Current identity shown automatically
  * Option to select multiple clusters
 
-#### Identity Assignment
+Identity Assignment
 - **Naming Options**:
  * Enter new cell type name
  * Label size customization
@@ -24,9 +24,9 @@ This section enables manual assignment of cell type identities to clusters based
  * Modify label font style
  * Control label placement
 
-### Visualization Tools
+Visualization Tools
 
-#### UMAP Display
+UMAP Display
 - **Basic Options**:
  * Show/hide cluster labels
  * Adjust point size
@@ -41,20 +41,6 @@ This section enables manual assignment of cell type identities to clusters based
   :width: 90%
   :align: center
 
-### Best Practices
-
-#### Cell Type Naming
-- Use standardized nomenclature
-- Be consistent across analyses
-- Include functional information
-- Document naming decisions
-
-#### Identity Verification
-- Check marker gene expression
-- Cross-reference literature
-- Validate with known markers
-- Consider biological context
-
 .. tip::
   * Start with well-known cell types
   * Use established markers
@@ -67,11 +53,3 @@ This section enables manual assignment of cell type identities to clusters based
   * Verify marker expression
   * Back up assignments
 
-### Troubleshooting
-
-Problem | Cause | Solution
---------|-------|----------
-Labels overlap | Too many clusters | Adjust label size
-Unclear identity | Weak markers | Check additional genes
-Inconsistent names | Typos/variants | Standardize nomenclature
-Missing labels | Display issues | Check visibility settings

@@ -4,11 +4,11 @@ Trajectory Analysis
 
 Trajectory Analysis is a powerful tool used to infer the developmental trajectory of cells from single-cell RNA sequencing data. This analysis helps in understanding differentiation paths and uncovering dynamic changes in gene expression over pseudo-time.
 
-### Concept of Trajectory Analysis
+Concept of Trajectory Analysis
 
 Trajectory Analysis involves mapping cells along a continuum representing a biological process, such as differentiation, cell cycle progression, or response to stimuli. The goal is to order cells in a way that reflects their progression through a biological process, allowing for the identification of intermediate states and transitions between cell types.
 
-### Key Steps in Trajectory Analysis
+Key Steps in Trajectory Analysis
 
 1. **Data Preparation and Conversion:**
    - Begin by loading a Seurat object containing single-cell RNA sequencing data.
@@ -28,7 +28,7 @@ Trajectory Analysis involves mapping cells along a continuum representing a biol
 .. warning::
    Incorrect root cell selection can lead to misleading trajectory inference. Always validate the trajectory with biological knowledge.
 
-### How to Perform Trajectory Analysis
+How to Perform Trajectory Analysis
 
 1. **Load the Seurat Object:** Start by uploading a Seurat object containing your single-cell data.
 2. **Convert to Monocle Object:** Click on the "Convert to Monocle" button to transform the Seurat object into a Monocle object.
@@ -40,8 +40,7 @@ Trajectory Analysis involves mapping cells along a continuum representing a biol
    :width: 90%
    :align: center
 
-### Applications of Trajectory Analysis
+References
+----------
 
-- **Developmental Biology:** Understand the differentiation pathways of stem cells into various lineages.
-- **Disease Progression:** Explore how diseases, such as cancer, evolve at the cellular level.
-- **Drug Response:** Study how cells change in response to drug treatments over time.
+1. http://cole-trapnell-lab.github.io/monocle-release/docs/#differentialgetest-details-and-options

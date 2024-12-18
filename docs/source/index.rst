@@ -14,14 +14,14 @@ We hope you will find this application useful and informative. Happy exploring!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Welcome
 
    introduction
    installation
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Single Dataset Analysis
 
    single_dataset_analysis/load_dataset
@@ -37,7 +37,7 @@ We hope you will find this application useful and informative. Happy exploring!
    single_dataset_analysis/subset
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Multiple Datasets Analysis
 
    multiple_datasets_analysis/load_datasets_merge
@@ -50,14 +50,14 @@ We hope you will find this application useful and informative. Happy exploring!
    multiple_datasets_analysis/subset_merge
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Trajectory Analysis
 
    trajectory_analysis/trajectory_analysis
    trajectory_analysis/genes_pseudotime  
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Nichenet Analysis
 
    nichenet_analysis/nichenet_load_and_define
@@ -70,7 +70,7 @@ We hope you will find this application useful and informative. Happy exploring!
    nichenet_analysis/regulatory_network
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Acknowledgment & Licence
 
    acknowledgment

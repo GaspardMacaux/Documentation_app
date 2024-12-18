@@ -2,8 +2,8 @@
 Getting Started
 ==========================
 
-1. Install Docker Desktop
-------------------------
+**Install Docker Desktop**
+
 .. tip:: 
   First, you need to install Docker Desktop to run our application
 
@@ -12,8 +12,8 @@ Getting Started
 3. Install Docker Desktop by following the installation wizard
 4. Start Docker Desktop and wait until it's fully running
 
-2. Run Our Application
---------------------
+**Run Our Application**
+
 .. tip::
   Once Docker Desktop is running, you can get our application using the Docker Desktop interface
 
@@ -24,8 +24,8 @@ Getting Started
 5. Once downloaded, click "Run"
 6. In your web browser, go to: ``http://localhost:3838``
 
-3. Troubleshooting
------------------
+**Troubleshooting**
+
 If the above method doesn't work, try using the command line:
 
 **For Windows:**

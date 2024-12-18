@@ -1,5 +1,5 @@
 =====================================
-HEATMAPS AND DUAL EXPRESSION ANALYSIS
+Heatmaps and dual expression analysis
 =====================================
 
 OVERVIEW

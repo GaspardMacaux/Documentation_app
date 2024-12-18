@@ -104,6 +104,5 @@ PARAMETER ADJUSTMENT TIPS
    - Use Multilevel Refinement for detailed analysis
 
 References
-----------
 
 1. Korsunsky, I., Millard, N., Fan, J. et al. Fast, sensitive and accurate integration of single-cell data with Harmony. Nat Methods 16, 1289–1296 (2019). https://doi.org/10.1038/s41592-019-0619-0

@@ -41,6 +41,6 @@ How to Perform Trajectory Analysis
    :align: center
 
 References
-----------
+
 
 1. http://cole-trapnell-lab.github.io/monocle-release/docs/#differentialgetest-details-and-options

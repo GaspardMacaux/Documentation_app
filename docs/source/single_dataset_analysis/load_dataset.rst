@@ -2,10 +2,10 @@
 Load Dataset
 ====================
 
-Overview
+**Overview**
 The dataset loading section is the entry point for analyzing your single-cell RNA sequencing data. This section guides you through loading and initializing your data for downstream analysis.
 
-Data Types and Requirements
+**Data Types and Requirements**
 
 Option 1: Raw 10X Genomics Data
 Required files (compressed in a single `.zip`):
@@ -17,7 +17,7 @@ Option 2: Pre-processed Seurat Object
 - Format: `.rds` file
 - Requirements: Must be a valid Seurat object (version 4 or higher)
 
-Step-by-Step Loading Process
+**Step-by-Step Loading Process**
 
 1. **Select Species**
    - Choose between "Mouse" or "Human"
@@ -43,7 +43,7 @@ Step-by-Step Loading Process
    :width: 90%
    :align: center
 
-Important Notes
+**Important Notes**
 
 .. tip::
    - Ensure your files are properly formatted before uploading
@@ -56,9 +56,9 @@ Important Notes
    - Corrupted .rds files
    - Incompatible Seurat object versions
    - Memory limitations with very large datasets
-References
-----------
 
-1. Hao et al., Dictionary learning for integrative, multimodal and scalable single-cell analysis."https://doi.org/10.1038/s41587-023-02100-3",
+**References**
 
-2."https://satijalab.org/seurat/articles/get_started_v5_new"
+1. Hao et al., Dictionary learning for integrative, multimodal and scalable single-cell analysis.https://doi.org/10.1038/s41587-023-02100-3
+
+2.https://satijalab.org/seurat/articles/get_started_v5_new

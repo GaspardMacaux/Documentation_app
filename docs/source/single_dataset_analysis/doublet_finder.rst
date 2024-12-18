@@ -71,7 +71,6 @@ Validation Approaches
 - Verify rare populations
 
 References
-----------
 
 1. McGinnis, C.S., Murrow, L.M. & Gartner, Z.J. DoubletFinder: Doublet Detection in Single-Cell RNA Sequencing Data Using Artificial Nearest Neighbors. Cell Syst 8, 329-337.e4 (2019).
 

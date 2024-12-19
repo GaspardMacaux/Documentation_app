@@ -1,59 +1,60 @@
-===============================
 Heat Maps & Dual Expression
 ===============================
 
-### Overview
+Overview
+--------------------
 Heat maps and dual expression analyses are powerful tools for visualizing gene expression patterns across your dataset. Heat maps show expression levels of multiple genes across clusters, while dual expression analysis reveals relationships between pairs of genes.
 
 Heat Map Analysis
+--------------------
 
 Features and Options
-- **Gene Selection**:
+--------------------
+- Gene Selection:
   * Choose specific genes of interest
   * Select multiple genes simultaneously
   * Use search function for quick gene finding
-
-- **Clustering Options**:
+- Clustering Options:
   * Specify clusters to include
   * Select/deselect all clusters
   * Customize cluster order
-
-- **Visualization Settings**:
+- Visualization Settings:
   * Adjust color scheme
   * Set resolution for export
   * Modify plot dimensions
 
 Interpretation Guide
-- **Color Intensity**:
+--------------------
+- Color Intensity:
   * Darker = Higher expression
   * Lighter = Lower expression
   * White = No expression
-
-- **Clustering Patterns**:
+- Clustering Patterns:
   * Rows = Genes
   * Columns = Clusters/Cells
   * Dendrograms show relationships
 
 Dual Expression Analysis
+--------------------
 
 Setup and Options
-- **Gene Selection**:
+--------------------
+- Gene Selection:
   * Pick first target gene
   * Select second gene for comparison
   * Option to include specific clusters
-
-- **Visualization Controls**:
+- Visualization Controls:
   * Point size adjustment
   * Color scheme selection
   * Resolution settings
 
 Analysis Features
-- **Co-expression Patterns**:
+--------------------
+- Co-expression Patterns:
   * X-axis = First gene
   * Y-axis = Second gene
   * Points = Individual cells
-
-- **Pattern Interpretation**:
+- Pattern Interpretation:
   * Diagonal = Correlated expression
   * Scattered = Independent expression
   * Clusters = Cell populations
@@ -71,6 +72,7 @@ Analysis Features
    * Validate unexpected patterns
 
 Troubleshooting Guide
+--------------------
 
 Problem | Cause | Solution
 --------|-------|----------

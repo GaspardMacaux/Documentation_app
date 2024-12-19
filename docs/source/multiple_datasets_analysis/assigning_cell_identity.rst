@@ -1,48 +1,57 @@
-==========================
 Assigning Cell Identity
 ==========================
 
 Overview
-
+--------------------
 Assigning cell type identities to clusters is a crucial step in single-cell analysis. This process involves labeling clusters based on known marker gene expression, allowing for the annotation of cell types or states.
 
 Concept of Cell Type Assignment
-
+--------------------
 Cell type assignment is the process of labeling clusters with known cell type identities based on their gene expression profiles. This step is important for:
+- Understanding the composition of cell populations within a dataset
+- Relating clusters to known biological cell types or states
+- Facilitating downstream analyses such as differential expression or pathway analysis
 
-- Understanding the composition of cell populations within a dataset.
-- Relating clusters to known biological cell types or states.
-- Facilitating downstream analyses such as differential expression or pathway analysis.
+Assignment Process
+--------------------
 
-### How to Assign Cell Type Identities
+Marker Gene Identification
+--------------------
+Identify marker genes that are characteristic of specific cell types. These genes are highly expressed in certain cell types but not in others.
 
-1. **Marker Gene Identification**:  
-   Identify marker genes that are characteristic of specific cell types. These genes are highly expressed in certain cell types but not in others.
-
-2. **Cluster Annotation**:  
-   Assign cell type identities to clusters based on the expression patterns of marker genes. This can be done manually by renaming clusters in the UI or through automated tools that match expression patterns to reference datasets.
+Cluster Annotation
+--------------------
+Assign cell type identities to clusters based on the expression patterns of marker genes. This can be done manually by renaming clusters in the UI or through automated tools that match expression patterns to reference datasets.
 
 .. image:: ../_static/images/multiple_datasets_analysis/assigning_cell_identity_merge.png
    :width: 90%
    :align: center
 
-### How to Use the Interface
+Using the Interface
+--------------------
 
-1. **UMAP Plot**:  
-   Visualize the clusters in a UMAP plot to identify the spatial distribution of cells.
+UMAP Visualization
+--------------------
+Visualize the clusters in a UMAP plot to identify the spatial distribution of cells.
 
-2. **Rename Clusters**:  
-   - Select a cluster from the dropdown menu and input a new name to rename the cluster.
-   - Use the "Rename Cluster" button to apply the changes.
+Cluster Management
+--------------------
+1. Rename Clusters:
+   - Select a cluster from the dropdown menu
+   - Input a new name to rename the cluster
+   - Use the "Rename Cluster" button to apply changes
 
-3. **Merge Clusters**:  
-   - If two clusters need to be merged, select a cluster and input the name of another cluster to merge them.
-   - The interface allows merging by selecting the clusters and using the "Merge Clusters" button.
+2. Merge Clusters:
+   - Select a cluster and input another cluster name to merge
+   - Use the "Merge Clusters" button to combine selected clusters
 
-4. **Update Cluster Colors**:  
-   Customize the colors of clusters for better visualization in plots. Use the color picker and "Update Color" button to set the desired color for each cluster.
+Visual Customization
+--------------------
+1. Update Cluster Colors:
+   - Use color picker for cluster selection
+   - Set desired color for each cluster
+   - Apply changes with "Update Color" button
 
-5. **Download UMAP Plot**:  
-   After assigning identities, download the updated UMAP plot for further use.
-
-
+2. Export Options:
+   - Download UMAP plot after assignments
+   - Save for further analysis or presentation

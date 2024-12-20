@@ -28,13 +28,18 @@ Gene Expression-Based Subsetting
 - Set expression threshold and minimum number of expressed genes
 - Click "Apply Gene-based Subset" to create subset based on gene expression criteria
 
+.. image:: ../_static/images/multiple_datasets_analysis/subset1_merge.png
+   :width: 90%
+   :align: center
+
+
 Subset Visualization
 --------------------
 - Visualize UMAP plots of original and subsetted data
 - Explore distribution of selected clusters or gene expression patterns
 - Confirm selection accuracy
 
-.. image:: ../_static/images/multiple_datasets_analysis/subset_merge.png
+.. image:: ../_static/images/multiple_datasets_analysis/subset2_merge.png
    :width: 90%
    :align: center
 

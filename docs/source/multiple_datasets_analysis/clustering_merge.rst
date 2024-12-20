@@ -15,6 +15,10 @@ First, click "Run Scaling, PCA and Elbow Plot". This performs three essential op
 - Calculates Principal Component Analysis (PCA)
 - Generates an Elbow Plot to help determine optimal dimensions
 
+.. image:: ../_static/images/multiple_datasets_analysis/scaling_PCA_merge.png
+   :width: 90%
+   :align: center
+
 Optional: Harmony Integration
 --------------------
 If your datasets show batch effects, you can use Harmony integration:
@@ -32,6 +36,10 @@ Number of Dimensions
 - Range: 1 to maximum PCs available
 - How to choose: Look at the Elbow Plot where variance explained plateaus
 - Impact: Higher values include more information but increase noise
+
+.. image:: ../_static/images/multiple_datasets_analysis/neighbors_merge.png
+   :width: 90%
+   :align: center
 
 Resolution for Clustering
 --------------------
@@ -59,6 +67,10 @@ Clustering Algorithm Options
    - Best for: Very large datasets
    - Characteristics: Fastest option
    - May miss some subtle clusters
+
+.. image:: ../_static/images/multiple_datasets_analysis/clustering_merge.png
+   :width: 90%
+   :align: center
 
 Visualization Options
 --------------------

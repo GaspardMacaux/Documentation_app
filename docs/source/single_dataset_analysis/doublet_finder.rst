@@ -5,6 +5,11 @@ Overview
 --------------------
 DoubletFinder is a tool used to identify and remove cell doublets from single-cell RNA sequencing data. Doublets occur when two cells are captured and sequenced together, potentially confounding downstream analysis.
 
+.. image:: ../_static/images/single_dataset_analysis/doublet_finder.png
+   :width: 90%
+   :align: center
+
+
 Parameters and Settings
 --------------------
 

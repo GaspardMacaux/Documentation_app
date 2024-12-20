@@ -38,10 +38,6 @@ Step-by-Step Process
   * Calculates principal components
   * Generates visualizations
 
-.. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
-   :width: 90%
-   :align: center
-
 3. Output Visualization
 - PCA Results Table:
   * Shows variance explained by each PC
@@ -49,6 +45,10 @@ Step-by-Step Process
 - Loading Plot:
   * Shows gene contributions to PCs
   * Helps identify influential genes
+
+.. image:: ../_static/images/single_dataset_analysis/dimensional_reduction.png
+   :width: 90%
+   :align: center
 
 Determining Optimal PC Number
 --------------------

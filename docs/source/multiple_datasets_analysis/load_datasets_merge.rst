@@ -12,6 +12,10 @@ Data integration in the context of single-cell RNA sequencing involves combining
 - Increase the statistical power by pooling cells from multiple datasets
 - Enable a unified analysis across different conditions or experimental setups
 
+.. image:: ../_static/images/multiple_datasets_analysis/load_datasets_merge.png
+   :width: 90%
+   :align: center
+
 Data Loading Options
 --------------------
 

@@ -24,6 +24,10 @@ Quality Control Metrics
   * scRNA-seq: <5-10%
   * snRNA-seq: <2-5% (lower due to nuclear isolation)
 
+.. image:: ../_static/images/single_dataset_analysis/data_cleanup.png
+   :width: 90%
+   :align: center
+
 Step-by-Step Quality Control
 --------------------
 
@@ -54,6 +58,10 @@ Normalization
 - Log-normalization: Standard approach
 - Accounts for sequencing depth differences
 - Makes data more suitable for downstream analysis
+
+.. image:: ../_static/images/single_dataset_analysis/variables_features.png
+   :width: 90%
+   :align: center
 
 Variable Feature Selection
 --------------------

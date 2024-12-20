@@ -45,7 +45,7 @@ We hope you will find this application useful and informative. Happy exploring!
 
    multiple_datasets_analysis/load_datasets_merge
    multiple_datasets_analysis/clustering_merge
-   multiple_datasets_analysis/differentially_expression_merge
+   multiple_datasets_analysis/differential_expression_merge
    multiple_datasets_analysis/genes_expressions_merge
    multiple_datasets_analysis/heatmap_merge
    multiple_datasets_analysis/assigning_cell_identity_merge

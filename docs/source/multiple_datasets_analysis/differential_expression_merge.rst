@@ -1,4 +1,4 @@
-DIFFERENTIALLY EXPRESSED GENES
+Differentially expressed genes 
 ==============================
 
 Overview

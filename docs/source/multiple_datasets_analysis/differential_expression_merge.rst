@@ -12,7 +12,7 @@ Differential expression analysis compares gene expression levels between groups 
 - How cells respond to different conditions
 - Which genes might serve as markers for specific cell populations
 
-.. image:: ../_static/images/multiple_datasets_analysis_differentialy_expressed_1_merge.png
+.. image:: ../_static/images/differentialy_expressed_1_merge.png
    :width: 90%
    :align: center
 
@@ -26,7 +26,7 @@ The analysis uses statistical tests to identify significant differences in gene 
 - Calculates significance (p-values)
 - Identifies consistently different genes
 
-.. image:: ../_static/images/multiple_datasets_analysis_differentialy_expressed_2_merge.png
+.. image:: ../_static/images/differentialy_expressed_1_merge.png
    :width: 90%
    :align: center
 

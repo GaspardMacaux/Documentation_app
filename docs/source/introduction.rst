@@ -16,6 +16,10 @@ Seurat: The Core Analysis Engine
 - Marker gene identification
 - Differential expression analysis
 
+CellChat: Cell Communication Analysis
+- Inference of cell-cell communication networks
+- Prediction of ligand-target interactions
+
 Monocle3: Developmental Dynamics
 - Reconstruction of cellular trajectories
 - Pseudo-time analysis
@@ -38,7 +42,7 @@ Analysis Pipeline
 --------------------
 Our streamlined workflow guides you through each step of single-cell analysis:
 
-.. image:: _static/images/pipeline.png
+.. image:: _static/images/introduction.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
@@ -67,6 +71,7 @@ Key Publications and Resources
 Publications
 --------------------
 - Seurat: Hao et al., Nature Biotechnology (2024)
+- Cellchat: Jin et al., Nature Protocols (2025)
 - Monocle3: Cao et al., Nature (2019)
 - NicheNet: Browaeys et al., Nature Methods (2020)
 - MultiNicheNet: Browaeys et al., bioRxiv (2023)
@@ -75,6 +80,7 @@ Online Resources
 --------------------
 Documentation and Tutorials:
 - Seurat: https://satijalab.org/seurat/
+- CellChat: https://htmlpreview.github.io/?https://github.com/jinworks/CellChat/blob/master/tutorial/CellChat-vignette.html#load-the-required-libraries
 - Monocle3: http://cole-trapnell-lab.github.io/monocle3/
 - NicheNet: https://github.com/saeyslab/nichenetr
 - MultiNicheNet: https://github.com/saeyslab/multinichenetr

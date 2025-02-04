@@ -19,7 +19,7 @@ Getting Started
 
 1. Open Docker Desktop
 2. Click on the "Search" box
-3. Type: ``gaspardmacaux/singlenucleus:V1``
+3. Type: ``gaspardmacaux/singlenucleus:latest``
 4. Click "Pull" to download the image
 5. Once downloaded, click "Run"
 6. In your web browser, go to: ``http://localhost:3838``
@@ -30,12 +30,12 @@ If the above method doesn't work, try using the command line:
 
 **For Windows:**
   1. Press ``Windows + X`` and click "Windows PowerShell" or "Terminal"
-  2. Type: ``docker pull gaspardmacaux/singlenucleus:V1``
-  3. Then: ``docker run -p 3838:3838 gaspardmacaux/singlenucleus:V1``
+  2. Type: ``docker pull gaspardmacaux/singlenucleus:latest``
+  3. Then: ``docker run -p 3838:3838 gaspardmacaux/singlenucleus:latest``
   4. Access the application at ``http://localhost:3838``
 
 **For Mac:**
   1. Open Terminal (Applications > Utilities > Terminal)
-  2. Type: ``docker pull gaspardmacaux/singlenucleus:V1``
-  3. Then: ``docker run -p 3838:3838 gaspardmacaux/singlenucleus:V1``
+  2. Type: ``docker pull gaspardmacaux/singlenucleus:latest``
+  3. Then: ``docker run -p 3838:3838 gaspardmacaux/singlenucleus:latest``
   4. Access the application at ``http://localhost:3838``

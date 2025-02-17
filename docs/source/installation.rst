@@ -1,3 +1,20 @@
+==========================
+Getting Started
+Installation
+.. tip::
+First, you need to install Docker Desktop to run our application
+
+1. Go to Docker Desktop Download Page <https://www.docker.com/products/docker-desktop/>_
+2. Download the version for your system (Windows or Mac)
+3. Install Docker Desktop by following the installation wizard
+4. Start Docker Desktop and wait until it's fully runnin
+
+
+
+Running the Application
+Windows (amd64)
+--------------------
+
 **Using Docker Desktop interface:**
 
 1. Open Docker Desktop

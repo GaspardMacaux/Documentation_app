@@ -1,8 +1,7 @@
 Getting Started
 ==========================
-Installation
-.. tip::
-First, you need to install Docker Desktop to run our application
+
+**First, you need to install Docker Desktop to run our application**
 
 1. Go to Docker Desktop Download Page <https://www.docker.com/products/docker-desktop/>_
 2. Download the version for your system (Windows or Mac)
@@ -11,7 +10,7 @@ First, you need to install Docker Desktop to run our application
 
 
 
-Running the Application
+
 Windows 
 --------------------
 

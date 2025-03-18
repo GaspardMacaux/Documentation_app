@@ -1,5 +1,5 @@
-==========================
 Getting Started
+==========================
 Installation
 .. tip::
 First, you need to install Docker Desktop to run our application
@@ -32,7 +32,7 @@ Windows
 4. Access the application at ``http://localhost:3838``
 
 Mac
-~~~
+--------------------
 
 **For Mac with Intel chip:**
 

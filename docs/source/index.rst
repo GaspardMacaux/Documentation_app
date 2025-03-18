@@ -18,8 +18,8 @@ We hope you will find this application useful and informative. Happy exploring!
    :titlesonly:
    :caption: Welcome
 
-   introduction
-   installation
+   introduction_app/introduction
+   introduction_app/installation
 
 .. toctree::
    :maxdepth: 1
@@ -31,7 +31,6 @@ We hope you will find this application useful and informative. Happy exploring!
    single_dataset_analysis/dimentional_reduction
    single_dataset_analysis/clustering
    single_dataset_analysis/doublet_finder
-   single_dataset_analysis/differentially_expressed_genes
    single_dataset_analysis/visualizing_marker_expression
    single_dataset_analysis/heatmaps
    single_dataset_analysis/assigning_cell_identity
@@ -45,7 +44,6 @@ We hope you will find this application useful and informative. Happy exploring!
 
    multiple_datasets_analysis/load_datasets_merge
    multiple_datasets_analysis/clustering_merge
-   multiple_datasets_analysis/differential_expression_merge
    multiple_datasets_analysis/genes_expressions_merge
    multiple_datasets_analysis/heatmap_merge
    multiple_datasets_analysis/assigning_cell_identity_merge

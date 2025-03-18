@@ -26,17 +26,12 @@ Monocle3: Developmental Dynamics
 - Cell fate mapping and lineage tracing
 - Identification of branch points and cell state transitions
 
-NicheNet: Cell Communication Analysis
+NicheNet & MultiNicheNet: Cell Communication Analysis
 - Inference of cell-cell communication networks
 - Prediction of ligand-target interactions
 - Analysis of signaling pathways
-- Cellular microenvironment modeling
-
-MultiNicheNet: Complex Interaction Analysis
-- Multi-condition communication analysis
 - Comparative studies across samples
 - Differential network analysis
-- Integration of complex experimental designs
 
 Analysis Pipeline
 --------------------

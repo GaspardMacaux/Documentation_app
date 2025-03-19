@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Gasp'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Cell-Hub'
+copyright = '2024, Macaux'
+author = 'Macaux'
 
 release = '0.1'
 version = '0.1.0'

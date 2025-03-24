@@ -10,7 +10,6 @@ Getting Started
 
 
 
-
 Windows 
 --------------------
 
@@ -20,8 +19,40 @@ Windows
 2. Click on the "Search" box
 3. Type: ``gaspardmacaux/cell-hub:other_processor``
 4. Click "Pull" to download the image
-5. Once downloaded, click "Run"
-6. In your web browser, go to: ``http://localhost:3838``
+
+.. image:: _static/images/introduction/docker_pull.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+
+5. Once downloaded, click on the play button
+
+.. image:: _static/images/introduction/docker_launch.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+6. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
+
+.. image:: _static/images/docker_run.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+7. Wait that all packages are loaded. 
+
+.. image:: _static/images/docker_launch.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+8. Now click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
+
+.. image:: _static/images/docker_start.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
 
 **Using command line:**
 
@@ -35,21 +66,7 @@ Mac
 
 **For Mac with Intel chip:**
 
-*Using Docker Desktop interface:*
-
-1. Open Docker Desktop
-2. Click on the "Search" box
-3. Type: ``gaspardmacaux/cell-hub:other_processor``
-4. Click "Pull" to download the image
-5. Once downloaded, click "Run"
-6. In your web browser, go to: ``http://localhost:3838``
-
-*Using command line:*
-
-1. Open Terminal (Applications > Utilities > Terminal)
-2. Type: ``docker pull gaspardmacaux/cell-hub:other_processor``
-3. Then: ``docker run -p 3838:3838 gaspardmacaux/cell-hub:other_processor``
-4. Access the application at ``http://localhost:3838``
+ Same as windows
 
 **For Mac with Apple Silicon chip:**
 
@@ -57,17 +74,50 @@ Mac
 
 1. Open Docker Desktop
 2. Click on the "Search" box
-3. Type: ``gaspardmacaux/cell-hub:apple_processor``
+3. Type: ``gaspardmacaux/cell-hub:other_processor``
 4. Click "Pull" to download the image
-5. Once downloaded, click "Run"
-6. In your web browser, go to: ``http://localhost:3838``
+
+.. image:: _static/images/introduction/docker_pull.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+
+5. Once downloaded, click on the play button
+
+.. image:: _static/images/introduction/docker_launch.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+6. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
+
+.. image:: _static/images/docker_run.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+7. Wait that all packages are loaded. 
+
+.. image:: _static/images/docker_wait.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
+8. Now click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
+
+.. image:: _static/images/docker_start.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
+
 
 *Using command line:*
 
 1. Open Terminal (Applications > Utilities > Terminal)
 2. Type: ``docker pull gaspardmacaux/cell-hub:apple_processor``
 3. Then: ``docker run -p 3838:3838 gaspardmacaux/cell-hub:apple_processor``
-4. Access the application at ``http://localhost:3838``
+4. Wait that all packages are loaded. Access the application at ``http://localhost:3838``
 
 Accessing the Application
 -------------------------

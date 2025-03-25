@@ -16,9 +16,10 @@ Windows
 **Using Docker Desktop interface:**
 
 1. Open Docker Desktop
-2. Click on the "Search" box
-3. Type: ``gaspardmacaux/cell-hub:other_processor``
-4. Click "Pull" to download the image
+2. On the left side, go to the images tab
+3. Click on the "Search" box
+4. Type: ``gaspardmacaux/cell-hub:other_processor``
+5. Click "Pull" to download the image
 
 .. image:: ../_static/images/introduction/docker_pull.png
    :width: 90%
@@ -26,28 +27,28 @@ Windows
    :alt: Pipeline illustration
 
 
-5. Once downloaded, click on the play button
+6. Once downloaded, click on the play button
 
 .. image:: ../_static/images/introduction/docker_launch.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-6. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
+7. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
 
 .. image:: ../_static/images/introduction/docker_run.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-7. Wait that all packages are loaded. 
+8. Wait that all packages are loaded. 
 
 .. image:: ../_static/images/introduction/docker_launch.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-8. Now click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
+9. Now, go to the containers tab and click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
 
 .. image:: ../_static/images/introduction/docker_start.png
    :width: 90%
@@ -74,8 +75,9 @@ Mac
 
 1. Open Docker Desktop
 2. Click on the "Search" box
-3. Type: ``gaspardmacaux/cell-hub:other_processor``
-4. Click "Pull" to download the image
+3. On the left side, go to the images tab
+4. Type: ``gaspardmacaux/cell-hub:other_processor``
+5. Click "Pull" to download the image
 
 .. image:: ../_static/images/introduction/docker_pull.png
    :width: 90%
@@ -83,28 +85,28 @@ Mac
    :alt: Pipeline illustration
 
 
-5. Once downloaded, click on the play button
+6. Once downloaded, click on the play button
 
 .. image:: ../_static/images/introduction/docker_launch.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-6. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
+7. It will open a pop-up, where you can enter the name of the docker image and most importantly you will need to set the display port on 3838:3838
 
 .. image:: ../_static/images/introduction/docker_run.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-7. Wait that all packages are loaded. 
+8. Wait that all packages are loaded. 
 
 .. image:: ../_static/images/introduction/docker_wait.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration
 
-8. Now click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
+9. Now go to the containers tab and click on 3838:3838 displayed in blue or go in your web browser and go to: ``http://localhost:3838``
 
 .. image:: ../_static/images/introduction/docker_start.png
    :width: 90%

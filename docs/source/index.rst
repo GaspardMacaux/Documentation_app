@@ -8,7 +8,7 @@ This application allows anyone who is not familiar with computer code to use man
 We hope you will find this application useful and informative. Happy exploring!
 
 
-.. image:: /_static/images/introduction/introduction.png
+.. image:: /_static/images/introduction/pipeline.png
    :width: 90%
    :align: center
 

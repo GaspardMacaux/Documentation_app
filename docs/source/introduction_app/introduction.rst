@@ -1,4 +1,7 @@
-Introduction
+.. image:: ../_static/images/introduction/introduction.png
+   :width: 90%
+   :align: center
+   :alt: Pipeline illustration
 ==========================
 
 Overview
@@ -37,7 +40,7 @@ Analysis Pipeline
 --------------------
 Our streamlined workflow guides you through each step of single-cell analysis:
 
-.. image:: ../_static/images/introduction/introduction.png
+.. image:: ../_static/images/introduction/pipeline.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration

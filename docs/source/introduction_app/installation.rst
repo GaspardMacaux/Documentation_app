@@ -43,7 +43,7 @@ Windows
 
 8. Wait that all packages are loaded. 
 
-.. image:: ../_static/images/introduction/docker_launch.png
+.. image:: ../_static/images/introduction/docker_wait.png
    :width: 90%
    :align: center
    :alt: Pipeline illustration

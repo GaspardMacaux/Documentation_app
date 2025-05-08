@@ -66,22 +66,20 @@ Our streamlined workflow guides you through each step of single-cell analysis:
 Key Publications and Resources
 --------------------
 
-**Publications**
+Publications
 --------------------
+* Seurat: Hao et al., Nature Biotechnology (2024)
+* Cellchat: Jin et al., Nature Protocols (2025)
+* Monocle3: Cao et al., Nature (2019)
+* NicheNet: Browaeys et al., Nature Methods (2020)
+* MultiNicheNet: Browaeys et al., bioRxiv (2023)
 
-* **Seurat**: Hao et al., *Nature Biotechnology* (2024)
-* **Cellchat**: Jin et al., *Nature Protocols* (2025)
-* **Monocle3**: Cao et al., *Nature* (2019)
-* **NicheNet**: Browaeys et al., *Nature Methods* (2020)
-* **MultiNicheNet**: Browaeys et al., *bioRxiv* (2023)
-
-**Online Resources**
+Online Resources
 --------------------
-
 Documentation and Tutorials:
 
-* `Seurat <https://satijalab.org/seurat/>`__
-* `CellChat <https://htmlpreview.github.io/?https://github.com/jinworks/CellChat/blob/master/tutorial/CellChat-vignette.html#load-the-required-libraries>`__
-* `Monocle3 <http://cole-trapnell-lab.github.io/monocle3/>`__
-* `NicheNet <https://github.com/saeyslab/nichenetr>`__
-* `MultiNicheNet <https://github.com/saeyslab/multinichenetr>`__
+* Seurat: https://satijalab.org/seurat/
+* CellChat: https://htmlpreview.github.io/?https://github.com/jinworks/CellChat/blob/master/tutorial/CellChat-vignette.html#load-the-required-libraries
+* Monocle3: http://cole-trapnell-lab.github.io/monocle3/
+* NicheNet: https://github.com/saeyslab/nichenetr
+* MultiNicheNet: https://github.com/saeyslab/multinichenetr

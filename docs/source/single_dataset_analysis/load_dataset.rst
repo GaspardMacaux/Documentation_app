@@ -10,9 +10,9 @@ Data Types and Requirements
 
 Option 1: Raw 10X Genomics Data
 Required files (compressed in a single `.zip`):
-- `barcodes.tsv.gz`: Contains cell barcodes
-- `matrix.mtx.gz`: Contains the expression matrix
-- `features.tsv.gz`: Contains gene information
+   *`barcodes.tsv.gz`: Contains cell barcodes
+   *`matrix.mtx.gz`: Contains the expression matrix
+   *`features.tsv.gz`: Contains gene information
   
 Option 2: Pre-processed Seurat Object
 - Format: `.rds` file
@@ -30,9 +30,9 @@ Step-by-Step Loading Process
 - **Multiome**: For multi-modal data including RNA-seq
    
 3. Upload Data
-- Click "Choose File" to select your data
-- For 10X data: Select your `.zip` file
-- For Seurat object: Select your `.rds` file
+   *Click "Choose File" to select your data
+   *For 10X data: Select your `.zip` file
+   *For Seurat object: Select your `.rds` file
 
 4. Data Processing
 The application will automatically:

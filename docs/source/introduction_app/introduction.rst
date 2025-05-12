@@ -25,7 +25,7 @@ CellChat: Cell Communication Analysis
 * Inference of cell-cell communication networks
 * Prediction of ligand-target interactions
 
-Monocle3: Developmental Dynamics
+Monocle: Developmental Dynamics
 
 * Reconstruction of cellular trajectories
 * Pseudo-time analysis
@@ -56,12 +56,14 @@ Our streamlined workflow guides you through each step of single-cell analysis:
    * Feature selection
    * Batch effect correction
 
+
 2. Core Analysis
 
    * Dimensional reduction (PCA, UMAP)
    * Cell population identification
    * Marker gene discovery
    * Expression analysis
+
 
 3. Advanced Applications
 

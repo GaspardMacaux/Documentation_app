@@ -37,9 +37,12 @@ templates_path = ['_templates']
 # Configuration pour le thème Read the Docs
 html_theme = 'sphinx_rtd_theme'
 # Options pour le thème Read the Docs
+# Paramètres pour la table des matières
 html_theme_options = {
-    'collapse_navigation': False,  # Empêche le menu de se refermer
-    'navigation_depth': -1,        # Affiche toutes les sections sans limite de profondeur
+    'navigation_depth': 1,  # Limite la profondeur de navigation à 1 niveau
+    'collapse_navigation': False,  # Empêche la fermeture automatique des sections
+    'sticky_navigation': True,  # Garde la navigation visible pendant le défilement
+    'titles_only': True,  # Affiche uniquement les titres dans la barre latérale
 }
 # Ajouter le répertoire `_static` pour les fichiers statiques
 html_static_path = ['_static']

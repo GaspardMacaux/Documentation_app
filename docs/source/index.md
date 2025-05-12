@@ -15,7 +15,9 @@ We hope you will find this application useful and informative. Happy exploring!
 
 introduction_app/introduction
 introduction_app/installation
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Single Dataset Analysis
@@ -30,7 +32,9 @@ single_dataset_analysis/heatmaps
 single_dataset_analysis/assigning_cell_identity
 single_dataset_analysis/cluster_biomarkers
 single_dataset_analysis/subset
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Multiple Datasets Analysis
@@ -42,7 +46,9 @@ multiple_datasets_analysis/heatmap_merge
 multiple_datasets_analysis/assigning_cell_identity_merge
 multiple_datasets_analysis/biomarkers_merge
 multiple_datasets_analysis/subset_merge
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Cell Chat
@@ -50,14 +56,18 @@ multiple_datasets_analysis/subset_merge
 cellchat_analysis/cellchat_load
 cellchat_analysis/cellchat_ligandreceptor
 cellchat_analysis/cellchat_circleplot
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Monocle
 
 trajectory_analysis/trajectory_analysis
 trajectory_analysis/genes_pseudotime
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Nichenet Analysis
@@ -70,9 +80,12 @@ nichenet_analysis/multinichenet_run_and_view
 nichenet_analysis/genes_set_ligan_inferance
 nichenet_analysis/lr_activity_plots
 nichenet_analysis/regulatory_network
+```
 
+```{toctree}
 :maxdepth: 1
 :titlesonly:
 :caption: Acknowledgment & Licence
 
 acknowledgment
+```

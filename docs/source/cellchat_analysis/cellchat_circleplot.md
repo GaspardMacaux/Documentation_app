@@ -1,61 +1,110 @@
 # Circle Plots Analysis
 
 ## Overview
-Circle plots provide three complementary ways to visualize and understand cell-cell communication patterns in your data. Each visualization type offers a different perspective on how your cells interact with each other.
+Circle plots provide powerful visualization methods to understand cell-cell communication networks from different perspectives. This section offers three complementary approaches: chord diagrams for specific interactions, global network overviews, and cell type-focused communication patterns.
 
-## Global Circle Plot
+## What You'll Do on This Tab
+- **Create chord diagrams** showing directional communication between specific cell types
+- **Generate global network plots** displaying overall communication patterns
+- **Analyze cell type-specific signals** focusing on individual populations
+- **Customize visualizations** for optimal display and interpretation
 
-### Purpose
-The global circle plot gives you a comprehensive view of how all cell types in your dataset communicate with each other. It's perfect for getting an initial overview of your cell-cell communication patterns.
+## Visualization Methods Available
 
-### Usage Steps
-1. Select your CellChat object from the dropdown menu
-2. Choose your visualization preference:
-   - "Number of interactions" to see how many connections exist
-   - "Interaction weights" to see the strength of communications
-3. Click "Generate Plot" to create the visualization
-4. Use "Download Plot" to save your results
+### 1. Chord Plot - Ligand-Receptor Interactions
 
-## Cell Type Specific Plots
+**When to use**: Examine specific directional communications between selected cell types
 
-### Purpose
-These plots focus on specific cell types of interest, showing their communication patterns in detail. This is useful when you want to examine particular cell populations more closely.
+**What it shows**:
+- **Chord width**: Strength of communication between cell types
+- **Direction**: Which cell type sends signals to which
+- **Color coding**: Different cell types have distinct colors
+- **Specific interactions**: Focus on particular ligand-receptor pairs
 
-### Usage Steps
-1. Select your CellChat object
-2. Choose the cell types you want to examine:
-   - You can select multiple cell types
-   - Each selected cell type will get its own visualization
-3. Generate the plots to see detailed communication patterns
-4. Download your results for further use
+#### Setup Process
+**Data Selection**:
+- **CellChat object**: Choose which analysis results to visualize
+- **Sender cell types**: Select cells that produce ligands
+- **Receiver cell types**: Select cells that express receptors
+- Can focus on specific cell type pairs of interest
 
-## Chord Diagram
+**Parameters**:
+- **Min probability**: Minimum interaction strength to display (default: 0.05)
+- **Label distance**: How far labels appear from the circle
+- **Label size**: Text size for cell type names
 
-### Purpose
-Chord diagrams show directional communication between cell types, making it easy to see which cells are sending signals and which are receiving them. They are particularly useful for understanding pathway-specific interactions.
+**Display Settings**:
+- **Plot size**: Diameter in pixels for optimal viewing
+- **Custom colors**: Optional cell type-specific colors
+- **Export options**: Multiple formats available
 
-### Usage Steps
-1. Select your sender and receiver cell types
-2. Choose specific signaling pathways if you want to focus on particular biological processes
-3. Select display mode:
-   - "Sending from selected" to focus on outgoing signals
-   - "Receiving by selected" to focus on incoming signals
-4. Generate and download your visualization
+**Generate Plot**:
+- Click "Generate Plot" to create chord diagram
+- Shows directional communication flows between selected cell types
 
-## Best Practices and Tips
+### 2. Network Overview - Global Communication
 
-### Analysis Strategy
-- Start with the global circle plot to get an overview
-- Use cell type specific plots to dive deeper into populations of interest
-- Use chord diagrams when you want to understand directional communication
-- Consider biological relevance when selecting cell types and pathways
+**When to use**: Get comprehensive view of all communication patterns in your dataset
 
-### Common Questions
-- Which plot should I start with?
-  Begin with the global circle plot for an overview, then use the others for detailed analysis
-- How many cell types should I select?
-  Start with a few key cell types of interest to keep visualizations clear
-- What does the size of connections mean?
-  Larger connections indicate stronger or more numerous interactions
-- Can I compare between conditions?
-  Yes, generate plots for each condition using different CellChat objects
+**What it shows**:
+- **Cell type nodes**: Circles representing each cell type
+- **Node size**: Proportional to cell type abundance
+- **Edge thickness**: Communication strength between cell types
+- **Network structure**: Overall communication topology
+
+#### Configuration Options
+**Metric Selection**:
+- **Number of interactions**: Shows how many different signals exist
+- **Interaction weights**: Shows total communication strength
+- Choose based on whether you want diversity vs intensity
+
+**Visual Parameters**:
+- **Cell type size**: Adjust node sizes (5-30 range)
+- **Max edge width**: Control maximum connection thickness
+- **Label size**: Text size for cell type names
+- **Plot margin**: Space around the network
+
+**Display Control**:
+- **Display size**: Plot dimensions in pixels
+- Adjust based on number of cell types for optimal viewing
+
+#### Interpretation Guide
+- **Central nodes**: Cell types involved in many communications
+- **Thick edges**: Strong communication channels
+- **Isolated nodes**: Cell types with limited communication
+- **Network clusters**: Groups of highly interconnected cell types
+
+### 3. Cell Type Focus - Outgoing & Incoming Signals
+
+**When to use**: Examine communication patterns for specific cell types of interest
+
+**What it shows**:
+- **Outgoing signals**: What messages a cell type sends to others
+- **Incoming signals**: What messages a cell type receives from others
+- **Individual plots**: Separate visualization for each selected cell type
+
+#### Setup Configuration
+**Cell Type Selection**:
+- **Select cell types**: Choose specific populations to analyze
+- **Multiple selection**: Analyze several cell types simultaneously
+- **Signal direction**: Choose "Outgoing" or "Incoming" focus
+
+**Outgoing Signals (as sender)**:
+- Shows which cell types receive signals from your selected type
+- Edge thickness indicates communication strength
+- Reveals the "influence" of your cell type
+
+**Incoming Signals (as receiver)**:
+- Shows which cell types send signals to your selected type
+- Reveals what "inputs" your cell type receives
+- Identifies potential regulatory cell types
+
+**Layout Parameters**:
+- **Label size**: Text size for readability
+- **Plot margin**: Space around individual plots
+- **Columns**: Number of plots per row (1-6)
+- **Plot height**: Individual plot dimensions
+
+![](../_static/images/cellchat_analysis/cellchat_circleplot.png)
+
+

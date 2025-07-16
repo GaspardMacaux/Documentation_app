@@ -1,110 +1,125 @@
 # Clustering Multiple Datasets
 
 ## Overview
-After loading and integrating your datasets, the clustering step helps identify distinct cell populations based on gene expression patterns. This process involves several key steps: data scaling, dimensional reduction, optional batch effect correction with Harmony, and finally, cell clustering.
+This section performs dimensional reduction and clustering on your integrated datasets. It handles the challenges of analyzing multiple datasets together by scaling data, reducing dimensions, optionally correcting batch effects with Harmony, and finally clustering cells across all datasets.
 
-## Step-by-Step Process
+## What You'll Do on This Tab
+- **Scale data and run PCA** to reduce dimensionality across all datasets
+- **Apply Harmony integration** (optional) to correct batch effects between datasets
+- **Find neighbors and run UMAP** to visualize integrated data
+- **Perform clustering** to identify cell populations across datasets
 
-### Scaling and Dimensional Reduction
-First, click "Run Scaling, PCA and Elbow Plot". This performs three essential operations:
-- Scales your data to make genes comparable
-- Calculates Principal Component Analysis (PCA)
-- Generates an Elbow Plot to help determine optimal dimensions
+## Analysis Pipeline
+
+### Step 1: Scaling, PCA and Elbow Plot
+
+**What scaling and PCA do for multiple datasets**:
+- **Scaling**: Normalizes gene expression to make datasets comparable
+- **PCA**: Identifies main sources of variation across all datasets combined
+- **Elbow Plot**: Shows how much variation each component explains
+
+**Process**:
+- Click "Run Scaling, PCA and Elbow Plot"
+- System scales expression data from all datasets together
+- Calculates principal components capturing variation across datasets
+- Generates elbow plot to guide dimension selection
+
+**Elbow Plot Interpretation**:
+- Shows optimal number of dimensions to use for integration
+- Look for the "elbow" where variance explained plateaus
+- Use this information for subsequent steps
 
 ![](../_static/images/multiple_datasets_analysis/scaling_PCA_merge.png)
 
-### Optional: Harmony Integration
-If your datasets show batch effects, you can use Harmony integration:
-- Click "Run Harmony Integration"
-- In Harmony Settings:
-  * Select variables to integrate (like "dataset" or "condition")
-  * Set number of dimensions (default: 15)
+### Step 2: Harmony Integration (Optional)
 
-## Clustering Setup
+**What Harmony does**:
+- Corrects batch effects between datasets while preserving biological variation
+- Aligns similar cell types from different datasets
+- Creates harmonized dimensional reduction space
 
-### Number of Dimensions
-- Default value: 15
-- Range: 1 to maximum PCs available
-- How to choose: Look at the Elbow Plot where variance explained plateaus
-- Impact: Higher values include more information but increase noise
+**When to use Harmony**:
+- Datasets from different batches, labs, or protocols
+- Visible separation by dataset rather than biology in PCA
+- Want to focus on biological rather than technical differences
+
+**Harmony Settings**:
+- **Variables to integrate**: Choose which metadata columns contain batch information (usually "dataset")
+- **Number of dimensions**: How many PCs to use (default: 15, guided by elbow plot)
+
+**Process**:
+- Click "Run Harmony Integration" 
+- Select variables containing batch information
+- System corrects for technical differences between datasets
 
 ![](../_static/images/multiple_datasets_analysis/neighbors_merge.png)
 
-### Resolution for Clustering
-- Default value: 0.5
-- Range: 0.01 to 2.0
-- How to adjust:
-  * Lower values (0.1-0.3): Fewer, broader clusters
-  * Medium values (0.4-0.8): Balanced clustering
-  * Higher values (>0.8): More detailed, smaller clusters
-- Impact: Determines how finely the cells are grouped
+### Step 3: Find Neighbors and Run UMAP
 
-### Clustering Algorithm Options
-1. **Original Louvain**
-   - Best for: General purpose clustering
-   - Characteristics: Fast, reliable
-   - Good starting point for most analyses
+**What neighbors calculation does**:
+- Identifies cells with similar expression profiles across all datasets
+- Creates network of cell-to-cell relationships
+- Foundation for both clustering and UMAP visualization
 
-2. **Louvain with Multilevel Refinement**
-   - Best for: Large datasets
-   - Characteristics: More thorough, slower
-   - Can find more subtle clusters
+**Number of Dimensions Parameter**:
+- How many principal components (or Harmony components) to use
+- Default: 15 dimensions
+- Use elbow plot to guide selection
+- More dimensions = more detail, but potentially more noise
 
-3. **SLM Algorithm**
-   - Best for: Very large datasets
-   - Characteristics: Fastest option
-   - May miss some subtle clusters
+**UMAP Visualization**:
+- Creates 2D representation of high-dimensional data
+- Shows how datasets integrate together
+- Reveals cell population structure across datasets
+
+**Process**:
+- Set number of dimensions based on elbow plot
+- Click "Find Neighbors and run UMAP"
+- System calculates similarities and creates visualization
+
+### Step 4: Clustering
+
+**What clustering does for multiple datasets**:
+- Groups similar cells together across all datasets
+- Identifies shared cell populations between datasets
+- Reveals dataset-specific vs shared cell types
+
+**Resolution Parameter**:
+- Controls how many clusters are created (default: 0.5)
+- **Lower values (0.1-0.3)**: Fewer, broader clusters
+- **Higher values (0.8-2.0)**: More, finer clusters
+- Start with 0.5 and adjust based on results
+
+**Algorithm Options**:
+- **Original Louvain**: Fast, reliable for most datasets
+- **Louvain with Multilevel Refinement**: More thorough, better for complex data
+- **SLM Algorithm**: Fastest for very large datasets
+
+**Process**:
+- Set resolution based on expected cell type diversity
+- Choose clustering algorithm
+- Click "Find clusters"
+- System identifies cell populations across datasets
 
 ![](../_static/images/multiple_datasets_analysis/clustering_merge.png)
 
-## Visualization Options
+## Parameter Selection Guide
 
-### UMAP Plot Customization
-- Remove Axes: Hides axis lines and labels
-- Remove Legend: Hides cluster labels
-- DPI for UMAP Download: Adjust image resolution
-  * 300 DPI: Standard quality
-  * 600 DPI: High quality
-  * 1200 DPI: Publication quality
+### Dimensions for Analysis
+- **Too few dimensions**: May miss important biological variation
+- **Too many dimensions**: Include noise and batch effects
+- **Recommended**: Use elbow plot guidance, typically 10-30 dimensions
 
-## Workflow Order
+### Harmony Integration
+- **Always integrate when**: Datasets from different batches, protocols, or time points
+- **Skip integration when**: High-quality matched datasets with minimal batch effects
+- **Variables to integrate**: Usually "dataset", sometimes additional batch variables
 
-### Initial Analysis
-1. Run Scaling, PCA and view Elbow Plot
-2. Decide if Harmony integration is needed
-3. Run Harmony if required
-
-### Clustering Steps
-1. Set dimensions based on Elbow Plot
-2. Start with default resolution (0.5)
-3. Choose Original Louvain algorithm
-4. Click "Find Neighbors and run UMAP"
-5. Click "Find clusters"
-
-## Optimization Guide
-- If clusters look too broad: Increase resolution
-- If clusters look too fragmented: Decrease resolution
-- If clustering is slow: Try SLM algorithm
-- If subtle populations are important: Try Louvain with Multilevel Refinement
-
-## Best Practices
-
-### Resolution Adjustment
-- Start at 0.5
-- Increase in 0.1 increments if you need more clusters
-- Decrease if you see too many clusters
-- Consider your biological expectations
-
-### Dimension Selection
-- Look for the "elbow" in the Elbow Plot
-- Usually between 10-30 dimensions
-- Too few: Miss important variation
-- Too many: Include noise
-
-### Algorithm Selection
-- Start with Original Louvain
-- Switch to SLM if speed is an issue
-- Use Multilevel Refinement for detailed analysis
+### Clustering Resolution
+- **For exploratory analysis**: Start with 0.5
+- **For known cell types**: Adjust to match expected number of populations
+- **For fine-scale analysis**: Use higher resolution (0.8-1.5)
+- **For broad populations**: Use lower resolution (0.2-0.4)
 
 ## References
 1. Korsunsky, I., Millard, N., Fan, J. et al. Fast, sensitive and accurate integration of single-cell data with Harmony. Nat Methods 16, 1289–1296 (2019). https://doi.org/10.1038/s41592-019-0619-0

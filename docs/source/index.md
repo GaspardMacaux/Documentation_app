@@ -67,20 +67,6 @@ trajectory_analysis/trajectory_analysis
 trajectory_analysis/genes_pseudotime
 ```
 
-```{toctree}
-:maxdepth: 1
-:titlesonly:
-:caption: Nichenet Analysis
-
-nichenet_analysis/nichenet_load_and_define
-nichenet_analysis/nichenet_run_and_view
-nichenet_analysis/circos_plot
-nichenet_analysis/multinichenet_load_and_define
-nichenet_analysis/multinichenet_run_and_view
-nichenet_analysis/genes_set_ligan_inferance
-nichenet_analysis/lr_activity_plots
-nichenet_analysis/regulatory_network
-```
 
 ```{toctree}
 :maxdepth: 1

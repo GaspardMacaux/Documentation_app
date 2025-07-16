@@ -1,98 +1,97 @@
 # Data Cleanup & Variable Features
 
 ## Overview
-Quality control (QC) and data cleanup are essential steps in single-cell RNA sequencing analysis. This process ensures reliable results by removing low-quality cells and normalizing gene expression data.
+This section performs quality control and data preprocessing - essential steps before any analysis. Poor quality cells and technical artifacts are removed, and the data is normalized to make cells comparable.
 
-## Quality Control Metrics
+## Analysis Pipeline
 
-1. **Unique Genes (nFeature_RNA)**
-- **What it measures**: Number of different genes detected in each cell
-- **Why it matters**: 
-  * Too few genes: May indicate empty droplets or dead cells
-  * Too many genes: May indicate doublets (two cells captured together)
-- **Typical ranges**:
-  * scRNA-seq: 500-5000 genes
-  * snRNA-seq: 200-3000 genes
+### Step 1: Visualize Data Quality
 
-2. **Mitochondrial Content**
-- **What it measures**: Percentage of transcripts from mitochondrial genes
-- **Why it matters**: High mitochondrial content often indicates dying cells
-- **Typical thresholds**:
-  * scRNA-seq: <5-10%
-  * snRNA-seq: <2-5% (lower due to nuclear isolation)
+**QC Metrics Plot**
+- Click "QC metrics plot" to display violin plots showing:
+  - Number of genes per cell (nFeature_RNA)
+  - Number of UMI counts per cell (nCount_RNA) 
+  - Percentage of mitochondrial genes (percent.mt)
+- These plots help you identify outlier cells and set appropriate filtering thresholds
 
-![](../_static/images/single_dataset_analysis/data_cleanup.png)
+![](../_static/images/single_dataset_analysis/qc_single.tiff)
 
-## Step-by-Step Quality Control
+**Feature Scatter Plots**
+- Click "Feature Scatter Plots" to see relationships between metrics:
+  - UMI count vs mitochondrial percentage
+  - UMI count vs number of genes
+- Helps identify cells with unusual patterns (e.g., high mitochondrial content)
 
-1. **Examine QC Metrics**
-- View violin plots of key metrics
-- Look for clear outlier populations
-- Consider biological expectations for your cell types
+### Step 2: Set Quality Control Thresholds
 
-2. **Set Quality Thresholds**
-- Adjust the nFeature slider based on your distribution
-- Set mitochondrial percentage threshold
-- Consider your biological context when setting cutoffs
+**Unique Genes Detected Slider**
+- Sets the acceptable range of genes per cell (default: 200-2500)
+- Cells with too few genes may be empty droplets or dying cells
+- Cells with too many genes might be doublets (two cells captured together)
 
-3. **Apply Filters**
-- Click "Apply QC Filters" to remove low-quality cells
-- Monitor the number of cells retained
-- Check the distribution of remaining cells
+**Maximum Mitochondrial % Slider**  
+- Sets maximum allowed mitochondrial gene percentage (default: 5%)
+- High mitochondrial content often indicates cell stress or death
+- Should be lower for single-nucleus data (~2%) vs single-cell data (~5-10%)
 
-## Normalization
+**Scale Factor**
+- Normalization factor applied to all cells (default: 10,000)
+- Standardizes library sizes across cells before log-transformation
 
-1. **Scale Factor**
-- Default: 10,000 (standard for most analyses)
-- Adjustable based on library size distribution
-- Higher factors can help with very sparse data
+### Step 3: Apply Quality Filters
 
-2. **Normalization Method**
-- Log-normalization: Standard approach
-- Accounts for sequencing depth differences
-- Makes data more suitable for downstream analysis
+**Apply QC Filters**
+- Click this button to remove cells that don't meet your criteria
+- The system will show how many cells were retained vs filtered out
+- This step cannot be undone, so ensure your thresholds are appropriate
 
-![](../_static/images/single_dataset_analysis/variables_features.png)
+```{warning}
+Once you apply QC filters, filtered cells are permanently removed from the analysis. Check your thresholds carefully using the plots first.
+```
 
-## Variable Feature Selection
+### Step 4: Identify Variable Features
 
-### Selection Process
+**Number of Variable Features**
+- Enter the number of highly variable genes to identify (default: 2000)
+- These genes show high cell-to-cell variation and drive downstream analysis
+- More features = more biological detail but potentially more noise
 
-1. **Choose Number of Features**
-- Default: 2000 genes
-- Adjust based on:
-  * Dataset size
-  * Biological complexity
-  * Analysis goals
+**Normalize Data**
+- Click to perform log-normalization and identify variable features
+- This standardizes expression values and selects genes for clustering
+- A plot will show the most variable genes with labels
 
-2. **Selection Method**
-- Variance-stabilizing transformation (VST)
-- Identifies genes with high cell-to-cell variation
-- Accounts for mean-variance relationship
+![](../_static/images/single_dataset_analysis/normalise_single.tiff)
 
-## Visualization and Quality Assessment
+```{tip}
+Start with default parameters (200-2500 genes, 5% mitochondrial, 2000 variable features) and adjust based on your specific dataset and experimental conditions.
+```
 
-1. **QC Violin Plots**
-- Shows distribution of key metrics
-- Helps identify appropriate cutoffs
-- Updates after filtering
+## Expected Results
 
-2. **Feature-Feature Plots**
-- Relationship between different metrics
-- Helps identify outlier populations
-- Guides threshold selection
+After completing this pipeline:
+- Low-quality cells are removed
+- Expression data is normalized across cells  
+- Top variable genes are identified for downstream analysis
+- You can proceed to dimensional reduction and clustering
 
-3. **Variable Features Plot**
-- Shows most variable genes
-- Highlights selection thresholds
-- Helps verify feature selection
+## Key Quality Metrics
 
-> **Tip:**
-> * Start with standard thresholds and adjust based on your data
-> * Consider your biological question when setting cutoffs
-> * Document your QC decisions for reproducibility
+- **Cells retained**: Aim to keep 80-95% of cells after filtering
+- **Genes per cell**: Should follow expected distribution for your cell type
+- **Mitochondrial content**: Should be low and consistent across cells
+- **Variable features**: Should include known marker genes for your system
 
-> **Warning:**
-> * Overly strict filtering can remove rare cell types
-> * Too lenient filtering can introduce technical artifacts
-> * Always balance stringency with biological relevance
+## Troubleshooting
+
+**Too few cells retained?**
+- Relax filtering thresholds
+- Check if your data has unusual characteristics
+
+**Unusual distributions?**
+- May indicate batch effects or experimental issues
+- Consider more stringent filtering
+
+**No clear variable features?**  
+- May need more cells or deeper sequencing
+- Check data quality and preprocessing

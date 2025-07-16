@@ -6,7 +6,7 @@ Many thanks to Maxime Di Gallo, Edgar Jauliac, Léa Delivry and Hugues Escoffier
 
 Many thanks to Seurat, who has built a very useful and well-documented library.
 
-Many thanks to CellChat, Monocle and Nichenet.
+Many thanks to CellChat, Monocle.
 
 Many thank to Shiny, which makes it so easy to develop graphical user interfaces.
 

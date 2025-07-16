@@ -1,87 +1,127 @@
 # Clustering
 
 ## Overview
-Clustering is a key step in single-cell RNA sequencing analysis that groups cells with similar gene expression profiles into clusters. These clusters may correspond to different cell types, states, or other biological distinctions. In this application, clustering is performed in two main steps: **finding neighbors** and **running the clustering algorithm**. Additionally, **UMAP** is used to visualize the clusters.
+Clustering groups cells with similar gene expression patterns to identify distinct cell populations. This step uses the principal components from the previous analysis to find neighborhoods of similar cells, then groups them into clusters that may represent different cell types or states.
 
-## Neighbors Calculation
+## What is Neighbor Calculation, Clustering, and UMAP?
 
-### Finding Nearest Neighbors
-The first step in clustering is calculating the **nearest neighbors** for each cell based on their gene expression similarities.
-- Number of Dimensions Parameter: 
-  * Uses the PCs selected in the previous step
-  * Typical range: 10-30 dimensions
-  * More dimensions = more biological detail but potential noise
-  * Start with 10-15 for initial analysis
+**Neighbor Calculation**
+- Identifies cells with similar gene expression profiles in the reduced PC space
+- Creates a network where each cell is connected to its most similar neighbors
+- Forms the foundation for both clustering and visualization
 
-### Purpose and Benefits
-- Why Calculate Neighbors?
-  * Foundation for clustering analysis
-  * Identifies cells with similar expression profiles
-  * Required for UMAP visualization
-  * Creates network of cell relationships
+**Clustering**
+- Groups connected cells into distinct clusters based on their neighborhood relationships
+- Uses community detection algorithms to find densely connected cell groups
+- Each cluster potentially represents a different cell type or biological state
 
-## Running the Clustering
+**UMAP (Uniform Manifold Approximation and Projection)**
+- Creates a 2D visualization of the high-dimensional data
+- Preserves both local neighborhoods and global structure
+- Allows visual inspection of cluster separation and relationships
 
-### Resolution Settings
-After neighbor calculation, cells are grouped into clusters based on their similarities.
-- Resolution Parameter (0.1-2.0):
-  * Controls cluster granularity
-  * Lower values (0.2-0.4): Fewer, broader clusters
-  * Medium values (0.4-0.8): Balanced clustering
-  * Higher values (0.8-1.2): More detailed clusters
-  * Start with 0.5 and adjust based on results
+## Analysis Pipeline
 
-### Algorithm Options
-1. Original Louvain: 
-   * Fast and robust
-   * Good for most analyses
-   * Default choice for standard datasets
-2. Louvain with Multilevel Refinement:
-   * More precise cluster boundaries
-   * Better for complex datasets
-   * Use when you need more detailed clusters
-3. SLM Algorithm:
-   * Optimized for finding small populations
-   * Good for rare cell types
-   * Use when expecting many distinct populations
+### Step 1: Find Cell Neighbors
 
-![](../_static/images/single_dataset_analysis/neighbors.png)
+![](../_static/images/single_dataset_analysis/cluster_tab_single.tiff)
 
-## UMAP Visualization
+**Number of Dimensions**
+- Select how many principal components to use (default: 10)
+- More dimensions = capture more biological detail but include more noise
+- Use the elbow plot from previous step to guide this choice
+- Typical range: 10-30 dimensions
 
-### Display Options
-UMAP provides a 2D representation of the clustering results.
-- Visualization Options:
-  * Remove Axes: Cleaner visualization
-  * Remove Legend: Better for publication figures
-  * Image Resolution: Adjustable for exports
+**Find Neighbors**
+- Click "Find neighbors" to calculate cell-to-cell similarities
+- Creates a shared nearest neighbor graph
+- Also automatically runs UMAP for visualization
 
-### Interpretation Guide
-- Interpretation:
-  * Closer points = more similar cells
-  * Distance between clusters suggests relationship
-  * Shape and density can indicate population structure
+![](../_static/images/single_dataset_analysis/voisin_single.tiff)
 
-![](../_static/images/single_dataset_analysis/clustering.png)
+### Step 2: Identify Clusters
 
-> **Tip:**
-> * Start with default parameters (10-15 PCs, resolution 0.5)
-> * Adjust resolution to split/merge clusters
-> * Choose algorithm based on dataset complexity
-> * Use UMAP to validate clustering quality
+**Resolution Parameter**
+- Controls how finely cells are grouped (default: 0.5)
+- **Lower values (0.1-0.3)**: Fewer, broader clusters
+- **Medium values (0.4-0.8)**: Balanced clustering  
+- **Higher values (0.8-2.0)**: More detailed, smaller clusters
+- Start with 0.5 and adjust based on biological expectations
 
-> **Warning:**
-> * Very high resolutions can create artificial clusters
-> * Too few dimensions might miss biological variation
-> * Check biological markers to validate clusters
-> * Document parameters for reproducibility
+**Clustering Algorithm**
+- **Original Louvain**: Fast and reliable, good for most analyses
+- **Louvain with Multilevel Refinement**: More thorough, better for complex datasets
+- **SLM Algorithm**: Optimized for very large datasets, fastest option
 
-## Troubleshooting Guide
+**Find Clusters**
+- Click "Find clusters" to group cells based on the neighbor graph
+- Results show clusters colored on the UMAP plot
 
-| Problem | Possible Cause | Solution |
-|---------|---------------|----------|
-| Overclustering | Resolution too high | Lower resolution parameter |
-| Merged populations | Resolution too low | Increase resolution |
-| Poor separation | Too few dimensions | Increase number of PCs |
-| Artificial clusters | Too many dimensions/high resolution | Reduce parameters |
-| No rare populations | Algorithm not sensitive enough | Try SLM algorithm |
+![](../_static/images/single_dataset_analysis/cluster_single.tiff)
+
+### Step 3: Export Results
+
+**File Format Selection**
+- Choose export format: TIFF, PNG, PDF, JPEG, or SVG
+- TIFF recommended for publications (lossless, high quality)
+- PNG good for presentations and web use
+
+**Resolution (DPI)**
+- Set image resolution for downloads (default: 300)
+- 300 DPI: Standard quality for most uses
+- 600+ DPI: High quality for publications
+
+**Display Options**
+- Remove Axes: Cleaner plots without axis lines and numbers
+- Remove Legend: Minimal plots without cluster color legend
+
+**Download UMAP**
+- Click to save the clustering visualization
+- Includes all current display settings and colors
+
+```{tip}
+Start with default settings (10-15 dimensions, resolution 0.5, Original Louvain) then adjust based on your results. Higher resolution creates more clusters - increase if you expect many cell types.
+```
+
+## Expected Results
+
+After completing this pipeline:
+- Cells are grouped into distinct clusters visible on UMAP
+- Each cluster potentially represents a different cell type or state
+- Cluster numbers are assigned automatically
+- Ready for biological interpretation and marker gene analysis
+
+## Optimization Guidelines
+
+**Too Few Clusters?**
+- Increase resolution parameter
+- Try Louvain with Multilevel Refinement
+- Check if enough dimensions were used
+
+**Too Many Clusters?**
+- Decrease resolution parameter
+- May indicate overclustering of the same cell type
+- Consider if biological heterogeneity is expected
+
+**Poor Cluster Separation?**
+- May need more dimensions from PCA
+- Check data quality and batch effects
+- Consider different clustering algorithm
+
+```{warning}
+The resolution parameter significantly affects downstream analysis. Biological validation with known markers is essential to confirm clusters represent true cell types rather than technical artifacts.
+```
+
+## Choosing the Right Parameters
+
+**Dimensions**: Use elbow plot guidance, typically 10-30
+**Resolution**: Start at 0.5, adjust in 0.1 increments based on results
+**Algorithm**: Original Louvain for most cases, SLM for speed with large datasets
+
+## Next Steps
+
+Once satisfied with clustering:
+- Examine cluster-specific gene expression
+- Identify marker genes for each cluster
+- Assign biological identities based on known markers
+- Consider whether clusters need merging or splitting

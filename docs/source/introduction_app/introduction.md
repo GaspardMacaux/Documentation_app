@@ -25,12 +25,6 @@ Our application integrates four powerful analysis frameworks:
 * Cell fate mapping and lineage tracing
 * Identification of branch points and cell state transitions
 
-**NicheNet & MultiNicheNet: Cell Communication Analysis**
-* Inference of cell-cell communication networks
-* Prediction of ligand-target interactions
-* Analysis of signaling pathways
-* Comparative studies across samples
-* Differential network analysis
 
 ## Analysis Pipeline
 
@@ -63,8 +57,6 @@ Our streamlined workflow guides you through each step of single-cell analysis:
 * Seurat: Hao et al., Nature Biotechnology (2024)
 * Cellchat: Jin et al., Nature Protocols (2025)
 * Monocle: Cao et al., Nature (2019)
-* NicheNet: Browaeys et al., Nature Methods (2020)
-* MultiNicheNet: Browaeys et al., bioRxiv (2023)
 
 ### Online Resources
 
@@ -72,5 +64,3 @@ Documentation and Tutorials:
 * Seurat: https://satijalab.org/seurat/
 * CellChat: https://htmlpreview.github.io/?https://github.com/jinworks/CellChat/blob/master/tutorial/CellChat-vignette.html#load-the-required-libraries
 * Monocle3: http://cole-trapnell-lab.github.io/monocle3/
-* NicheNet: https://github.com/saeyslab/nichenetr
-* MultiNicheNet: https://github.com/saeyslab/multinichenetr
